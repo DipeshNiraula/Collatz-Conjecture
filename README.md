@@ -48,46 +48,58 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
 3. The only way to get of the operation is to land on a $2^n\$
 
-## Partitioning Method
+## Partitioning Method for 3n+1
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_3} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$
 
-This will span the whole $\mathbb{N}$.
+## Partitioning Method for 5n+1
+Partition $\mathbb{N}$ into four sets as follows:
+1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
+2. $\mathbb{E_0} = \\{ 5o-3 = 10k-8: k \in \mathbb{N} \\}$
+3. $\mathbb{E_1} = \\{ 5o-1 = 10k-6: k \in \mathbb{N} \\}$
+4. $\mathbb{E_2} = \\{ 5o+1 = 10k-4: k \in \mathbb{N} \\}$
+3. $\mathbb{E_3} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
+4. $\mathbb{E_4} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$
 
-Here is a table with the partition.
+This method will span the whole $\mathbb{N}$ and the relation between $k$ and $o$ remains the same. As we will see below that this partitioning system helps in comparing the transitions. The subscript is arbitrary at this point. I wanted to keep the set $\mathbb{E_2}$ same in both partition so I started number from 0 in $5n+1$.
 
-|	k	|	O:={o=2k-1}	|	E1={3o-1 = 6k-4}	|	E2={3o+1 = 6k-2}	|	E3={3o+3 = 6k}	|
-|---		|---		|	---	|---		|----		|
-|	1	|	1	|	2	|	4	|	6	|
-|	2	|	3	|	8	|	10	|	12	|
-|	3	|	5	|	14	|	16	|	18	|
-|	4	|	7	|	20	|	22	|	24	|
-|	5	|	9	|	26	|	28	|	30	|
-|	6	|	11	|	32	|	34	|	36	|
-|	7	|	13	|	38	|	40	|	42	|
-|	8	|	15	|	44	|	46	|	48	|
-|	9	|	17	|	50	|	52	|	54	|
-|	10	|	19	|	56	|	58	|	60	|
-|	11	|	21	|	62	|	64	|	66	|
-|	12	|	23	|	68	|	70	|	72	|
-|	13	|	25	|	74	|	76	|	78	|
-|	14	|	27	|	80	|	82	|	84	|
-|	15	|	29	|	86	|	88	|	90	|
-|	16	|	31	|	92	|	94	|	96	|
-|	17	|	33	|	98	|	100	|	102	|
-|	18	|	35	|	104	|	106	|	108	|
-|	19	|	37	|	110	|	112	|	114	|
-|	20	|	39	|	116	|	118	|	120	|
-|	21	|	41	|	122	|	124	|	126	|
-|	22	|	43	|	128	|	130	|	132	|
-|	23	|	45	|	134	|	136	|	138	|
-|	24	|	47	|	140	|	142	|	144	|
-|	25	|	49	|	146	|	148	|	150	|
+**Every number can be characterized by number the $k$ and the partition. For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_3})$ and $16 = (3, \mathbb{E_2})$, while in $5n+1$, $12 = (2, \mathbb{E_0})$ and $16 = (2, \mathbb{E_2})$.**
 
-## Property of the Partitions
+Here is a table with the partition for $3n+1$ and $5n+1$
+
+|	k	|	O:={o=2k-1}	|	E1={3o-1 = 6k-4}	|	E2={3o+1 = 6k-2}	|	E3={3o+3 = 6k}	|		|	k	|	O:={o=2k-1}	|	E0={5o-3 = 10k-8}	|	E1={5o-1 = 10k-6}	|	E2={5o+1 = 10k-4}	|	E3={5o+3 = 10k-2}	|	E4={5o+5 = 10k}	|
+|	---	|	---	|----|---|---|---|----|----|----|----|----|----|----|
+|	1	|	1	|	2	|	4	|	6	|		|	1	|	1	|	2	|	4	|	6	|	8	|	10	|
+|	2	|	3	|	8	|	10	|	12	|		|	2	|	3	|	12	|	14	|	16	|	18	|	20	|
+|	3	|	5	|	14	|	16	|	18	|		|	3	|	5	|	22	|	24	|	26	|	28	|	30	|
+|	4	|	7	|	20	|	22	|	24	|		|	4	|	7	|	32	|	34	|	36	|	38	|	40	|
+|	5	|	9	|	26	|	28	|	30	|		|	5	|	9	|	42	|	44	|	46	|	48	|	50	|
+|	6	|	11	|	32	|	34	|	36	|		|	6	|	11	|	52	|	54	|	56	|	58	|	60	|
+|	7	|	13	|	38	|	40	|	42	|		|	7	|	13	|	62	|	64	|	66	|	68	|	70	|
+|	8	|	15	|	44	|	46	|	48	|		|	8	|	15	|	72	|	74	|	76	|	78	|	80	|
+|	9	|	17	|	50	|	52	|	54	|		|	9	|	17	|	82	|	84	|	86	|	88	|	90	|
+|	10	|	19	|	56	|	58	|	60	|		|	10	|	19	|	92	|	94	|	96	|	98	|	100	|
+|	11	|	21	|	62	|	64	|	66	|		|	11	|	21	|	102	|	104	|	106	|	108	|	110	|
+|	12	|	23	|	68	|	70	|	72	|		|	12	|	23	|	112	|	114	|	116	|	118	|	120	|
+|	13	|	25	|	74	|	76	|	78	|		|	13	|	25	|	122	|	124	|	126	|	128	|	130	|
+|	14	|	27	|	80	|	82	|	84	|		|	14	|	27	|	132	|	134	|	136	|	138	|	140	|
+|	15	|	29	|	86	|	88	|	90	|		|	15	|	29	|	142	|	144	|	146	|	148	|	150	|
+|	16	|	31	|	92	|	94	|	96	|		|	16	|	31	|	152	|	154	|	156	|	158	|	160	|
+|	17	|	33	|	98	|	100	|	102	|		|	17	|	33	|	162	|	164	|	166	|	168	|	170	|
+|	18	|	35	|	104	|	106	|	108	|		|	18	|	35	|	172	|	174	|	176	|	178	|	180	|
+|	19	|	37	|	110	|	112	|	114	|		|	19	|	37	|	182	|	184	|	186	|	188	|	190	|
+|	20	|	39	|	116	|	118	|	120	|		|	20	|	39	|	192	|	194	|	196	|	198	|	200	|
+|	21	|	41	|	122	|	124	|	126	|		|	21	|	41	|	202	|	204	|	206	|	208	|	210	|
+|	22	|	43	|	128	|	130	|	132	|		|	22	|	43	|	212	|	214	|	216	|	218	|	220	|
+|	23	|	45	|	134	|	136	|	138	|		|	23	|	45	|	222	|	224	|	226	|	228	|	230	|
+|	24	|	47	|	140	|	142	|	144	|		|	24	|	47	|	232	|	234	|	236	|	238	|	240	|
+|	25	|	49	|	146	|	148	|	150	|		|	25	|	49	|	242	|	244	|	246	|	248	|	250	|
+
+
+## Property of the Partitions for 3n+1
 
 **Theorem 1**  
 **$U:\mathbb{O} \rightarrow \mathbb{E_2}$ for all $k$** (By construction)
@@ -162,5 +174,68 @@ So there exists $k\in \mathbb{N}$, such that,
 $2^{2m+1} = 2(3k-2)$.  
 
 Hence, $2^p = 6k-4$.  
+
+## Property of the Partitions for 5n+1
+  
+**1. $U:\mathbb{O} \rightarrow \mathbb{E_2}$ for all $k$**
+
+**2a. $L:\mathbb{E_0} \rightarrow \mathbb{O}$ for odd $k$**   
+**2b. $L:\mathbb{E_0} \rightarrow \mathbb{E_2}$ for even $k$** 
+
+**3a. $L:\mathbb{E_1} \rightarrow \mathbb{E_0}$ for odd $k$**   
+**3b. $L:\mathbb{E_1} \rightarrow \mathbb{O}$ for even $k$** 
+
+**4a. $L:\mathbb{E_2} \rightarrow \mathbb{O}$ for odd $k$**   
+**4b. $L:\mathbb{E_2} \rightarrow \mathbb{E_3}$ for even $k$** 
+
+**5a. $L:\mathbb{E_3} \rightarrow \mathbb{E_1}$ for odd $k$**   
+**5b. $L:\mathbb{E_3} \rightarrow \mathbb{O}$ for even $k$**  
+
+**6a. $L:\mathbb{E_4} \rightarrow \mathbb{O}$ for odd $k$**   
+**6b. $L:\mathbb{E_4} \rightarrow \mathbb{E_4}$ for even $k$**  
+
+ 
+**7. The observation about $2^p$ seems to be consistent with $3n+1$ with added complexity. Eg: $2^n$ is missing from $E_4$.**
+
+
+
+## General Transition Rule
+1. In this scheme, Operation $U(n) = 3n+1$, only applies to $\mathbb{O}$, which leaves $k$ unchanged. 
+i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_2}) = 0$
+
+2. The transition from any Even set to $\mathbb{O}$ increases $k$.
+
+3. The transition from any Even set to another Even set decreases $k$.
+
+### Transition Rule for $3n+1$  
+**1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_2}] = 0$ for all $k$**  
+**2a. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{O}] = (k-1)/2$ for odd $k$**   
+**2b. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{E_2}] = -(k/2)$ for even $k$**  
+**3a. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{E_1}] = -(k-1)/2$ for odd $k$**   
+**3b. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{O}] = (k/2)$ for even $k$**  
+**4a. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{O}] = (k+1)/2$ for odd $k$**   
+**5b. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{E_3}] = -(k/2)$ for even $k$**  
+ 
+### Transition Rule for $5n+1$ 
+  
+**1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_2}] = 0$ for all $k$**
+
+**2a. $\Delta k [\mathbb{E_0} \rightarrow \mathbb{O}] = (3k-3)/2$ for odd $k$**   
+**2b. $\Delta k [\mathbb{E_0} \rightarrow \mathbb{E_2}] = -(k/2)$ for even $k$** 
+
+**3a. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{E_0}] = -(k+1)/2$ for odd $k$**   
+**3b. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{O}] = (3k-2)/2$ for even $k$**  
+
+**4a. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{O}] = (3k-1)/2$ for odd $k$**   
+**4b. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{E_3}] = -(k/2)$ for even $k$**  
+ 
+**5a. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{E_1}] = -(k+1)/2$ for odd $k$**   
+**5b. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{O}] = (3k/2)$ for even $k$**  
+
+**6a. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{O}] = (3k+1)/2$ for odd $k$**   
+**6b. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{E_4}] = -(k/2)$ for even $k$**  
+
+
+## Graph
 
 
