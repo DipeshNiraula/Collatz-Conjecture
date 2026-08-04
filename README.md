@@ -279,6 +279,8 @@ We pick a number (k=100, $\mathbb{E_3}$). The following is its transition.
 
 Any other loops can be rewritten as the combination of above.
 
+![loop1](./subloop_3n_1.png)
+
 **If we can show that Loop 1 cannot go on forever, we will show that 3x+1 doesn't diverge: **
 
 Pick a number $(k=m*2^x, \mathbb{O})$ such that $x$ is the largest integer, and m is a number not divisible by 2. This guarantees $k$ to be an even number for the longest time. The value of $k$ increases by $k/2$ per loop. i.e. $k_i = m \times 3^i \times 2^(x-i). After, $x$ loop $k = m \times 3^x$. Since $k$ is odd, Collatz operation will transition to other loops.
@@ -287,6 +289,15 @@ After this loop the number would have increased by a factor of $(3/2)^x$. Howeve
 
 
 ## Cycle
+The only way to have a cycle is from loop IV. Every other loop either increases or decreases. Combining loop I and III will also decrease the value overall.
 
+Consider this loop: $\mathbb{O} \rightarrow \mathbb{E_2}\rightarrow \mathbb{E_1}}\rightarrow \mathbb{O}$ 
+This loop gives,
+$L(L(U(x)))$. 
 
+To have a cycle,
+$L(L(U(x))) = x$  
+
+(3x+1)/4 = x
+This is only true when x =1.
 
