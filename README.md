@@ -268,4 +268,25 @@ We pick a number (k=100, $\mathbb{E_3}$). The following is its transition.
 |	17	|	1	|		|	X	|		|		|	odd	|	$(k-1)/2$	|	2	|
 |	18	|	1	|	X	|		|		|		|		|		|	1	|
 
+## Divergence
+
+1. In $3n+1$, this can only happen if, $\mathbb{O} \rightarrow \mathbb{E_2}$ is followed by $\mathbb{E_2} \rightarrow \mathbb{O}$ (Loop I). In this case, the number increases by $3/2 > 1$. A constant loop will increase the number. 
+
+2. In 3n+1, For all other loops the rate of increase < rate of decrease. 
+- Loop II: $\mathbb{E_3} \rightarrow \mathbb{E_3}\rightarrow \mathbb{E_3}$, reduces number by $1/4 < 1$.
+- Loop III: $\mathbb{E_2} \rightarrow \mathbb{E_1}\rightarrow \mathbb{E_2}$ reduces number by $1/4 < 1$.
+- Loop IV: $\mathbb{O} \rightarrow \mathbb{E_2}\rightarrow \mathbb{E_1}}\rightarrow \mathbb{O}$ reduces number by $3/4 <1$.
+
+Any other loops can be rewritten as the combination of above.
+
+**If we can show that Loop 1 cannot go on forever, we will show that 3x+1 doesn't diverge: **
+
+Pick a number $(k=m*2^x, \mathbb{O})$ such that $x$ is the largest integer, and m is a number not divisible by 2. This guarantees $k$ to be an even number for the longest time. The value of $k$ increases by $k/2$ per loop. i.e. $k_i = m \times 3^i \times 2^(x-i). After, $x$ loop $k = m \times 3^x$. Since $k$ is odd, Collatz operation will transition to other loops.
+
+After this loop the number would have increased by a factor of $(3/2)^x$. However, 
+
+
+## Cycle
+
+
 
