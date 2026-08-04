@@ -236,12 +236,14 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_2}) = 0$
 **6b. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{E_4}] = -(k/2)$ for even $k$**  
 
 
+## Transition Graph
+<img src="PartitionGraph.png" alt="Description" width="700">
 
-
+Probability of transition is given in red and $\Delta K$ is given in blue. Note that $\Delta k$ must be integer.
 
 ## Example using Transition Rule for $3n+1$
 
-Say we have been geive a number (k=100, \mathbb{O})
+We pick a number (k=100, $\mathbb{O}$). The following is its transition.
 
 
 
