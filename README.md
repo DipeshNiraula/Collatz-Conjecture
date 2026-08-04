@@ -44,8 +44,8 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 5. Applying this process on 5n+1 operation helps to see why they can diverge and lead to circular loop.
 
 ## Some property
-1. $U(n):= 3n+1$ stretches the number line or equivalently $U(n) >n \, odd n$
-2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n \, even n$
+1. $U(n):= 3n+1$ stretches the number line or equivalently $U(n) >n$, for odd $n$
+2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
 3. The only way to get of the operation is to land on a $2^n\$
 
 ## Partitioning Method
@@ -90,11 +90,11 @@ Here is a table with the partition.
 ## Property of the Partitions
 
 **Theorem 1**  
-$U:\mathbb{O} \rightarrow \mathbb{E_2}$ for all $k$ (By construction)
+**$U:\mathbb{O} \rightarrow \mathbb{E_2}$ for all $k$** (By construction)
 
 **Theorem 2**  
- a. $L:\mathbb{E_3} \rightarrow \mathbb{O}$ for odd $k$   
- b. $L:\mathbb{E_3} \rightarrow \mathbb{E_3}$ for even $k$  
+ a. **$L:\mathbb{E_3} \rightarrow \mathbb{O}$ for odd $k$**   
+ b. **$L:\mathbb{E_3} \rightarrow \mathbb{E_3}$ for even $k$**  
 
 Proof: $L(6k) = 3k$ 
 
@@ -104,58 +104,63 @@ This means, $L(6k) = 6m-3 = 3(2m-1) \in \mathbb{O}$.
 2b. for even $k$, $k = 2m$ for $m \in \mathbb{N}$.  
 This means, $L(6k) = 6m \in \mathbb{E_3}$.
 
-**Theorem 3**   
- $2^m \notin \mathbb{E_3}$ for all $m \in \mathbb{N}$  
+**Theorem 3**  
+ a. **$L:\mathbb{E_2} \rightarrow \mathbb{E_1}$ for odd $k$**   
+ b. **$L:\mathbb{E_2} \rightarrow \mathbb{O}$ for even $k$**  
+
+Follow the procedure of Theorem 2.
+
+**Theorem 4**  
+ a. **$L:\mathbb{E_1} \rightarrow \mathbb{O}$ for odd $k$**   
+ b. **$L:\mathbb{E_1} \rightarrow \mathbb{E_2}$ for even $k$**  
+
+Follow the procedure of Theorem 2.
+
+**Not sure the relevance of Therem 5 to 7, but something I noticed.**
+
+**Theorem 5**   
+ **$2^m \notin \mathbb{E_3}$ for all $m \in \mathbb{N}$**  
 Proof: By Contradiction.
 
 let, 
 $2^m = 6k$  
-$2(2^{n-1})= 2.3k$  
+$2(2^{n-1} )= 2 \times 3k$  
 $k=2^{n-1}/3$  
 Then 3 divides $2^{n-1}$.   
 But $2^{n-1}$ is a product of only the prime number 2, so it's only prime divisor is 2.   
-Contradition.    
-
-**Theorem 4**  
- a. $L:\mathbb{E_2} \rightarrow \mathbb{E_1}$ for odd $k$   
- b. $L:\mathbb{E_2} \rightarrow \mathbb{O}$ for even $k$  
-
-Follow the procedure of Theorem 2.
-
-**Theorem 5**  
-$2^p$ for even $p$ lives in $\mathbb{E_2}.
-i.e. $\\{2^p: p even} \subset \{6k-2): k \in \mathbb{N}$
-
-Proof:
-$p=2m, m\in \mathbb{N}$  
-Then, $2^p = 2^{2m}$  
-Since, $2^2 \equiv 1$ (mod 3)  
-$2^{2m} \equiv 1$ (mod 3)  
-Therefore, 2^{2m-1} \equiv 2 \equiv -1$  
-
-So there exists $k\in \mathbb{N}$, such that,  
-$2^{2m-1} = 3k-1$.  
-
-Hence, $2^{2m} = 2(3k-1)$.  
+Contradition.  
 
 **Theorem 6**  
- a. $L:\mathbb{E_1} \rightarrow \mathbb{O}$ for odd $k$   
- b. $L:\mathbb{E_1} \rightarrow \mathbb{E_2}$ for even $k$  
-
-Follow the procedure of Theorem 2.
-
-**Theorem 7**  
-$2^p$ for even $p$ lives in $\mathbb{E_2}.
-i.e. $\\{2^p: p even} \subset \{6k-2): k \in \mathbb{N}$
+**All $2^p$ for even $p$ lives in $\mathbb{E_2}$.**  
+i.e. $\\{2^p: p \, \text{even}\\} \subset \\{6k-2): k \in \mathbb{N}\\}$
 
 Proof:
 $p=2m, m\in \mathbb{N}$  
 Then, $2^p = 2^{2m}$  
 Since, $2^2 \equiv 1$ (mod 3)  
-$2^{2m} \equiv 1$ (mod 3)  
+$2^{2m} \equiv 1^m = 1$ (mod 3)  
 Therefore, 2^{2m-1} \equiv 2 \equiv -1$  
 
 So there exists $k\in \mathbb{N}$, such that,  
 $2^{2m-1} = 3k-1$.  
+or, $2^{2m} = 2(3k-1)$.
 
-Hence, $2^{2m} = 2(3k-1)$.  
+Hence, $2^p = 6k-2$.  
+
+**Theorem 7**  
+**All $2^p$ for odd $p$ lives in $\mathbb{E_1}$.**  
+i.e. $\\{2^p: p \, \text{odd} \\} \subset \\{6k-4): k \in \mathbb{N}\\}$
+
+Proof:
+$p=2m+1, m \in \mathbb{N} \cup \\{0\\} \$  
+Then, $2^p = 2^{2m+1}$  
+Since, $2^2 \equiv 1$ (mod 3)  
+$2^{2m} \equiv 1$ (mod 3)  
+Therefore, $2^{2m} \equiv 3k-2$  
+
+So there exists $k\in \mathbb{N}$, such that,  
+$2^{2m+1} = 2(3k-2)$.  
+
+Hence, $2^p = 6k-4$.  
+
+
