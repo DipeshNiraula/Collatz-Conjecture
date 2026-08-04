@@ -236,6 +236,12 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_2}) = 0$
 **6b. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{E_4}] = -(k/2)$ for even $k$**  
 
 
-## Graph
+
+
+
+## Example using Transition Rule for $3n+1$
+
+Say we have been geive a number (k=100, \mathbb{O})
+
 
 
