@@ -151,7 +151,7 @@ $p=2m, m\in \mathbb{N}$
 Then, $2^p = 2^{2m}$  
 Since, $2^2 \equiv 1$ (mod 3)  
 $2^{2m} \equiv 1^m = 1$ (mod 3)  
-Therefore, 2^{2m-1} \equiv 2 \equiv -1$  
+Therefore, $2^{2m-1} \equiv 2 \equiv -1$  
 
 So there exists $k\in \mathbb{N}$, such that,  
 $2^{2m-1} = 3k-1$.  
@@ -174,6 +174,8 @@ So there exists $k\in \mathbb{N}$, such that,
 $2^{2m+1} = 2(3k-2)$.  
 
 Hence, $2^p = 6k-4$.  
+
+**Note that $2^p$ for odd $p$ can be landed from only $2^p$ for even $p$.** 
 
 ## Property of the Partitions for 5n+1
   
@@ -237,13 +239,33 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_2}) = 0$
 
 
 ## Transition Graph
-<img src="PartitionGraph.png" alt="Description" width="700">
+<img src="PartitionGraph.png" alt="Description" width="600">
 
-Probability of transition is given in red and $\Delta K$ is given in blue. Note that $\Delta k$ must be integer.
+Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer.
 
 ## Example using Transition Rule for $3n+1$
 
-We pick a number (k=100, $\mathbb{O}$). The following is its transition.
+We pick a number (k=100, $\mathbb{E_3}$). The following is its transition.
 
+|	Step	|	k	|	O	|	E1	|	E2	|	E3	|	Parity of k	|	$\Delta k$	|	n	|
+|	---	|	---	|---		|	---	|	---	|---		|---		|---		|---		|
+|	1	|	100	|		|		|		|	X	|	even	|	$-(k/2)$	|	600	|
+|	2	|	50	|		|		|		|	X	|	even	|	$-(k/2)$	|	300	|
+|	3	|	25	|		|		|		|	X	|	odd	|	$(k+1)/2$	|	150	|
+|	4	|	38	|	X	|		|		|		|	Doesn’t matter	|	0	|	75	|
+|	5	|	38	|		|		|	X	|		|	Even	|	$k/2$	|	226	|
+|	6	|	57	|	X	|		|		|		|	Doesn’t matter	|	0	|	113	|
+|	7	|	57	|		|		|	X	|		|	odd	|	$(-k-1)/2$	|	340	|
+|	8	|	29	|		|	X	|		|		|	odd	|	$(k-1)/2$	|	170	|
+|	9	|	43	|	X	|		|		|		|	Doesn’t matter	|	0	|	85	|
+|	10	|	43	|		|		|	X	|		|	odd	|	$(-k-1)/2$	|	256	|
+|	11	|	22	|		|	X	|		|		|	even	|	$-(k/2)$	|	128	|
+|	12	|	11	|		|		|	X	|		|	odd	|	$(-k-1)/2$	|	64	|
+|	13	|	6	|		|	X	|		|		|	even	|	$-(k/2)$	|	32	|
+|	14	|	3	|		|		|	X	|		|	odd	|	$(-k-1)/2$	|	16	|
+|	15	|	2	|		|	X	|		|		|	even	|	$-(k/2)$	|	8	|
+|	16	|	1	|		|		|	X	|		|	odd	|	$(-k-1)/2$	|	4	|
+|	17	|	1	|		|	X	|		|		|	odd	|	$(k-1)/2$	|	2	|
+|	18	|	1	|	X	|		|		|		|		|		|	1	|
 
 
