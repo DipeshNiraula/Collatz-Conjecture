@@ -121,24 +121,24 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \math
 **3a. $L:\mathbb{E_c} \rightarrow \mathbb{E_1}$ for odd $k$**   
 **3b. $L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for even $k$**  
 
-**4a. $L:\mathbb{E_a} \rightarrow \mathbb{O}$ for odd $k$**   
+**4a. $L:\mathbb{E_a} \rightarrow \mathbb{O_a}$ for odd $k$**   
 **4b. $L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
 
 ## Property of the Partitions for $5n+1$
   
 **1. $U:\mathbb{O} \rightarrow \mathbb{E_c}$ for all $k$**
 
-**2a. $L:\mathbb{E_1} \rightarrow \mathbb{O}$ for odd $k$**   
+**2a. $L:\mathbb{E_1} \rightarrow \mathbb{O_1}$ for odd $k$**   
 **2b. $L:\mathbb{E_1} \rightarrow \mathbb{E_c}$ for even $k$** 
 
 **3a. $L:\mathbb{E_2} \rightarrow \mathbb{E_0}$ for odd $k$**   
 **3b. $L:\mathbb{E_2} \rightarrow \mathbb{O_2}$ for even $k$** 
 
-**4a. $L:\mathbb{E_c} \rightarrow \mathbb{O}$ for odd $k$**   
+**4a. $L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for odd $k$**   
 **4b. $L:\mathbb{E_c} \rightarrow \mathbb{E_3}$ for even $k$** 
 
 **5a. $L:\mathbb{E_3} \rightarrow \mathbb{E_2}$ for odd $k$**   
-**5b. $L:\mathbb{E_3} \rightarrow \mathbb{O}$ for even $k$**  
+**5b. $L:\mathbb{E_3} \rightarrow \mathbb{O_3}$ for even $k$**  
 
 **6a. $L:\mathbb{E_a} \rightarrow \mathbb{O_a}$ for odd $k$**   
 **6b. $L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
@@ -153,10 +153,13 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 
 ### Transition Rule for $3n+1$  
 **1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_c}] = 0$ for all $k$**  
+
 **2a. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{O_1}] = (k-1)/2$ for odd $k$**   
 **2b. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{E_c}] = -(k/2)$ for even $k$**  
+
 **3a. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{E_1}] = -(k-1)/2$ for odd $k$**   
 **3b. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{O_c}] = (k/2)$ for even $k$**  
+
 **4a. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{O_a}] = (k+1)/2$ for odd $k$**   
 **5b. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{E_a}] = -(k/2)$ for even $k$**  
  
