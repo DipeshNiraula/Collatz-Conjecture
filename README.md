@@ -39,14 +39,17 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
 3. The only way to get out is to land on a $2^n\$
 
-## Partitioning 3n+1 (3 even + 1 odd)
+## Partitioning Even set into $a$ partitions
+The following method will generate disjoint partitions that spans $\mathbb{N}$ and the relation between index $k$ and odd number $o$ remains the same for all $an+1$ partitions. This partitioning system helps in comparing the transitions. Subscripts $c$ stands for collatz and subscript $a$ from $an+1$. As you will see these are special partitions. 
+
+### 3n+1 (3 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_c} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$
 
-## Partitioning 5n+1 (5 even + 1 odd)
+### 5n+1 (5 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 5o-3 = 10k-8: k \in \mathbb{N} \\}$
@@ -55,17 +58,16 @@ Partition $\mathbb{N}$ into four sets as follows:
 3. $\mathbb{E_3} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$
 
-This method will span the whole $\mathbb{N}$ and the relation between $k$ and $o$ remains the same for any $an+1$ partitions. As we will see below that this partitioning system helps in comparing the transitions. The subscript $c$ stands for collatz and subscript $a$ is from $an+1$. As you will see these are special partitions. 
-
-Furthermore $\mathbb{O}$ can be partitioned into a partitions based on L(n) operation on $\mathbb E$ however I am not trying attempting index it.
-
 **Every number can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
 
-## Sub-Partitioning $\mathbb{O}$ for 3n+1 (3 even + 3 odd)
+## Sub-Partitioning $\mathbb{O}$ 
+Furthermore $\mathbb{O}$ can be partitioned into a partitions based on L(n) operation on $\mathbb E$ however I am not trying attempting index it.
+
+### for 3n+1 (3 even + 3 odd)
 $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_a}, \mathbb{O_c}\\}$
 
-## Sub-Partitioning $\mathbb{O}$ for 5n+1 (5 even + 5 odd)
+### for 5n+1 (5 even + 5 odd)
 $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{O_3}\\}$
 
 **Thoughts: May be there is another indexing schema that can make this into a proper partitioning?**
