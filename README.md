@@ -131,7 +131,7 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \math
 **2a. $L:\mathbb{E_1} \rightarrow \mathbb{O_1}$ for odd $k$**   
 **2b. $L:\mathbb{E_1} \rightarrow \mathbb{E_c}$ for even $k$** 
 
-**3a. $L:\mathbb{E_2} \rightarrow \mathbb{E_0}$ for odd $k$**   
+**3a. $L:\mathbb{E_2} \rightarrow \mathbb{E_1}$ for odd $k$**   
 **3b. $L:\mathbb{E_2} \rightarrow \mathbb{O_2}$ for even $k$** 
 
 **4a. $L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for odd $k$**   
