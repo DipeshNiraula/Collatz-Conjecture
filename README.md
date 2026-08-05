@@ -184,11 +184,11 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 
 **Thoughts: Finding $\Delta K$ instead of $L(k)$ or $U(k)$ is overcomplicating an already overcomplicated problem**
 
-## Transition Graph
-<img src="3n.png" alt="Description" width="400">
-<img src="5n.png" alt="Description" width="600">
+## Transition Graph for $3n +1$ and $5n+1$
+<img src="3n_v2.png" alt="Description" width="600">
+<img src="5n_v2.png" alt="Description" width="700">
 
-Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$.
+Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$. Red arrow halves the value and green arrows increases by $an+1$.
 
 ## Observation
 **1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$.** 
@@ -199,7 +199,7 @@ Seems like the following are related statements:
 **2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.**  
 **2c. Every loop contains element from $\mathbb{E_c}$.**  
 
-## Example using Transition Rule for $3n+1$ (3+1)
+### Example using Transition Rule for $3n+1$ (3+1)
 
 We pick a number ($k=100$, $\mathbb{E_a}$). The following is its transition.
 
@@ -224,12 +224,12 @@ We pick a number ($k=100$, $\mathbb{E_a}$). The following is its transition.
 |	17	|	1	|		|	X	|		|		|	odd	|	$(k-1)/2$	|	2	|
 |	18	|	1	|	X	|		|		|		|		|		|	1	|
 
-## Known Cycle for 3n+1 (using 3 + 3)
+### Known Cycle for 3n+1 (using 3 + 3)
 
 a. 1 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
 - $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_1}$ $\rightarrow$ $\mathbb{O_1}$
 
-## Known Cycle for 5n+1 (using 5 + 5)
+### Known Cycle for 5n+1 (using 5 + 5)
 
 a. 1 $\rightarrow$ 6 $\rightarrow$ 3 $\rightarrow$ 16 $\rightarrow$ 8 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
 - $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\mathbb{O_1}$
@@ -240,9 +240,7 @@ b. 13 $\rightarrow$ 66 $\rightarrow$ 33 $\rightarrow$ 166 $\rightarrow$ 83 $\rig
 c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\rightarrow$ 54 $\rightarrow$ 27 $\rightarrow$ 136 $\rightarrow$ 68 $\rightarrow$ 34 $\rightarrow$ 17
 - $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$
 
-
-
-## Partition for $7n + 1$
+### Partition for $7n + 1$
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 7o-5 = 14k-12: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 7o-3 = 14k-10: k \in \mathbb{N} \\}$
@@ -252,9 +250,10 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$
 8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$
 
-## Table for $7n+1$ 
+### Table for $7n+1$ 
+
 |	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_c}$	|	$\mathbb{E_5}$	|	$\mathbb{E_6}$	|	$\mathbb{E_a}$	|
-|		|		|		|		|		|		|		|		|		|
+|	---	|	---	|---		|---		|	---	|	---	|---		|	---	|	---	|
 |	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|
 |	2	|	3	|	16	|	18	|	20	|	22	|	24	|	26	|	28	|
 |	3	|	5	|	30	|	32	|	34	|	36	|	38	|	40	|	42	|
@@ -272,7 +271,7 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 |	15	|	29	|	198	|	200	|	202	|	204	|	206	|	208	|	210	|
 
 |	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_5}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_c}$	|	$\mathbb{O_6}$	|
-|		|		|		|		|		|		|		|
+|	---	|	---	|---		|	---	|	---	|	---	|	---	|
 |	1	|	3	|	5	|	7	|	9	|	11	|	13	|
 |	15	|	17	|	19	|	21	|	23	|	25	|	27	|
 |	29	|	31	|	33	|	35	|	37	|	39	|	41	|
@@ -283,7 +282,7 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 |	99	|	101	|	103	|	105	|	107	|	109	|	111	|
 |	113	|	115	|	117	|	119	|	121	|	123	|	125	|
 
-## Partition for $9n + 1$
+### Partition for $9n + 1$
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 9o-7 = 18k-16: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 9o-5 = 18k-14: k \in \mathbb{N} \\}$
@@ -295,10 +294,12 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 9. $\mathbb{E_8} = \\{ 9o+7 = 18k-2: k \in \mathbb{N} \\}$
 10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$
  
-## Table for $9n+1$ (Note 9 is a not prime)
+### Table for $9n+1$ 
+
+Note: 9 is not a prime, and may behave differently.
 
 |	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_4}$	|	$\mathbb{E_c}$	|	$\mathbb{E_6}$	|	$\mathbb{E_7}$	|	$\mathbb{E_8}$	|	$\mathbb{E_a}$	|
-|		|		|		|		|		|		|		|		|		|		|		|
+|	---	|---		|	---	|---		|	---	|	---	|---		|---		|	---	|	---	|---		|
 |	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|	16	|	18	|
 |	2	|	3	|	20	|	22	|	24	|	26	|	28	|	30	|	32	|	34	|	36	|
 |	3	|	5	|	38	|	40	|	42	|	44	|	46	|	48	|	50	|	52	|	54	|
@@ -317,7 +318,7 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 
 
 |	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_c}$	|	$\mathbb{O_7}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_4}$	|	$\mathbb{O_6}$	|	$\mathbb{O_8}$	|
-|		|		|		|		|		|		|		|		|		|
+|	---	|	---	|	---	|	---	|---		|---		|	---	|---		|---		|
 |	1	|	3	|	5	|	7	|	9	|	11	|	13	|	15	|	17	|
 |	19	|	21	|	23	|	25	|	27	|	29	|	31	|	33	|	35	|
 |	37	|	39	|	41	|	43	|	45	|	47	|	49	|	51	|	53	|
@@ -327,8 +328,12 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 |	109	|	111	|	113	|	115	|	117	|	119	|	121	|	123	|	125	|
 
 ## Transition Graph for $7n+1$ and $9n+1$
+<img src="7n_9n.png" alt="Description" width="700">
 
+## Observation 
+**1: For $7n+1$, if searching for cycles, exclude from the search the following partitions: $\mathbb{E_a}$, $\mathbb{O_a}$, $\mathbb{E_5}$, $\mathbb{O_5}$, $\mathbb{E_6}$, $\mathbb{O_6}$, $\mathbb{E_3}$, and $\mathbb{O_3}$.**
 
+**2: For $9n+1$, if searching for cycles, exclude from the search the following partitions: $\mathbb{E_a}$, $\mathbb{O_a}$, $\mathbb{E_6}$, $\mathbb{O_6}$, $\mathbb{E_3}$, and $\mathbb{O_3}$.**
 
 ## Appendix
 
