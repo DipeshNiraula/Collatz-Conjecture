@@ -1,6 +1,5 @@
 # Visualizing Collatz-Conjecture via Partition
-- Dipesh Niraula
-  
+
 ## Problem Statement
 From [wiki](https://en.wikipedia.org/wiki/Collatz_conjecture)
 
@@ -184,6 +183,7 @@ Probability of transition is given in red and $\Delta k$ is given in blue. Note 
 
 # Observation
 ## 1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$. 
+- If you are looking for a cycle, look else where.
 ## 2a. Only the elements of partitions $\mathbb{E_c}$ can be landed from even and odd number.
 ## 2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.
 ## 2c. Every loop contains element from $\mathbb{E_c}$.
