@@ -1,4 +1,4 @@
-# Collatz-Conjecture
+# Visualizing Collatz-Conjecture via Partition
 
 ## Problem Statement
 From [wiki](https://en.wikipedia.org/wiki/Collatz_conjecture)
@@ -37,16 +37,16 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 ## Some property
 1. $U(n):= an+1$ stretches the number line or equivalently $U(n) >n$, for odd $n$
 2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
-3. The only way to get of the operation is to land on a $2^n\$
+3. The only way to get out is to land on a $2^n\$
 
-## Partitioning Method for 3n+1
+## Partitioning Method for 3n+1 (3 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_c} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$
 
-## Partitioning Method for 5n+1
+## Partitioning Method for 5n+1 (5 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 5o-3 = 10k-8: k \in \mathbb{N} \\}$
@@ -55,19 +55,20 @@ Partition $\mathbb{N}$ into four sets as follows:
 3. $\mathbb{E_3} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$
 
-This method will span the whole $\mathbb{N}$ and the relation between $k$ and $o$ remains the same. As we will see below that this partitioning system helps in comparing the transitions. The subscript $c$ stands for collatz and subscript $a$ is from $an+1$. As you will see these are special partitions. 
+This method will span the whole $\mathbb{N}$ and the relation between $k$ and $o$ remains the same for any $an+1$ partitions. As we will see below that this partitioning system helps in comparing the transitions. The subscript $c$ stands for collatz and subscript $a$ is from $an+1$. As you will see these are special partitions. 
 
-Furthermore $\mathbb{O} can be partitioned into a partitions based on L(n) operation on $\mathbb E$ however I am not trying attempting index it.
+Furthermore $\mathbb{O}$ can be partitioned into a partitions based on L(n) operation on $\mathbb E$ however I am not trying attempting index it.
 
-## Partitioning $\mathbb{O}$ for 3n+1 
-$\mathbb{O}$ = {\mathbb{O_1}, \mathbb{O_a}, \mathbb{O_c}}
+**Every number can be characterized by the number $k$ and the partition.**   
+For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
 
-## Partitioning $\mathbb{O}$ for 5n+1 
-$\mathbb{O}$ = {\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{O_3}}
+## Sub-Partitioning $\mathbb{O}$ for 3n+1 (3 even + 3 odd)
+$\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_a}, \mathbb{O_c}\\}$
 
+## Sub-Partitioning $\mathbb{O}$ for 5n+1 (5 even + 5 odd)
+$\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{O_3}\\}$
 
-**Every number can be characterized by number the $k$ and the partition. For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.**
-
+**May be there is another indexing schema that can make this into a proper partitioning?**
 
 ## Table with the partition for $3n+1$ and $5n+1$
 
@@ -104,7 +105,7 @@ $\mathbb{O}$ = {\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{
 |	55	|	57	|	59	|		|	91	|	93	|	95	|	97	|	99	|
 
 
-## Property of the Partitions for 3n+1
+## Property of the Partitions for $3n+1$
 
 **1. $U:\mathbb{O} \rightarrow \mathbb{E_2}$ for all $k$** 
 
@@ -112,12 +113,12 @@ $\mathbb{O}$ = {\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{
 **2b. $L:\mathbb{E_1} \rightarrow \mathbb{E_c}$ for even $k$**  
  
 **3a. $L:\mathbb{E_c} \rightarrow \mathbb{E_1}$ for odd $k$**   
-**3b. $L:\mathbb{E_c} \rightarrow \mathbb{O}$ for even $k$**  
+**3b. $L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for even $k$**  
 
 **4a. $L:\mathbb{E_a} \rightarrow \mathbb{O}$ for odd $k$**   
 **4b. $L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
 
-## Property of the Partitions for 5n+1
+## Property of the Partitions for $5n+1$
   
 **1. $U:\mathbb{O} \rightarrow \mathbb{E_c}$ for all $k$**
 
@@ -137,8 +138,8 @@ $\mathbb{O}$ = {\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{
 **6b. $L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
 
 ## General Transition Rule
-1. In this scheme, Operation $U(n) = 3n+1$, only applies to $\mathbb{O}$, which leaves $k$ unchanged. 
-i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_2}) = 0$
+1. In this scheme, Operation $U(n) = an+1$, on $\mathbb{O}$, leaves $k$ unchanged. 
+i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 
 2. The transition from any Even set to $\mathbb{O}$ increases $k$.
 
@@ -172,11 +173,19 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_2}) = 0$
 **6a. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{O}] = (3k+1)/2$ for odd $k$**   
 **6b. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{E_4}] = -(k/2)$ for even $k$**  
 
+**Thoughts: Finding $\Delta K$ instead of $L(k)$ or $U(k)$ is overcomplicating an already overcomplicated problem**
 
-## Transition Graph$
-<img src="PartitionGraph.png" alt="Description" width="600">
+## Transition Graph
+<img src="3n.png" alt="Description" width="400">
+<img src="5n.png" alt="Description" width="600">
 
 Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer.
+
+# Observation
+## 1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$. 
+## 2a. Only the elements of partitions $\mathbb{E_c}$ can be landed from even and odd number.
+## 2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.
+## 2c. Every loop contains element from $\mathbb{E_c}$.
 
 ## Example using Transition Rule for $3n+1$
 
