@@ -68,7 +68,7 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_a}, \mathbb{O_c}\\}$
 ## Sub-Partitioning $\mathbb{O}$ for 5n+1 (5 even + 5 odd)
 $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{O_3}\\}$
 
-**May be there is another indexing schema that can make this into a proper partitioning?**
+**Thoughts: May be there is another indexing schema that can make this into a proper partitioning?**
 
 ## Table with the partition for $3n+1$ and $5n+1$
 
@@ -90,7 +90,7 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \math
 |	14	|	27	|	80	|	82	|	84	|		|	14	|	27	|	132	|	134	|	136	|	138	|	140	|
 |	15	|	29	|	86	|	88	|	90	|		|	15	|	29	|	142	|	144	|	146	|	148	|	150	|
 
-## Table with the partition of Odd Set for $3n+1$ and $5n+1$
+## Table with the subpartition of Odd Set for $3n+1$ and $5n+1$
 |	$\mathbb{O_1}$	|	$\mathbb{O_a}$	|	$\mathbb{O_c}$	|		|	$\mathbb{O_1}$	|	$\mathbb{O_c}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_3}$	|
 |	---	|	---	|---	|---	|---	|---	|---	|---	|---|
 |	1	|	3	|	5	|		|	1	|	3	|	5	|	7	|	9	|
