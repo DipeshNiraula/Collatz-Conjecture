@@ -1,4 +1,4 @@
-# Visualizing Collatz-Conjecture via Partition
+# Visualization of Collatz-Conjecture through Partitioning
 
 ## Problem Statement
 From [wiki](https://en.wikipedia.org/wiki/Collatz_conjecture)
