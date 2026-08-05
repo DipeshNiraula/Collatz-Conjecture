@@ -1,5 +1,6 @@
 # Visualizing Collatz-Conjecture via Partition
-- Dipesh Niraula 
+- Dipesh Niraula
+  
 ## Problem Statement
 From [wiki](https://en.wikipedia.org/wiki/Collatz_conjecture)
 
