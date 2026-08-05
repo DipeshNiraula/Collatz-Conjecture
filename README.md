@@ -56,11 +56,11 @@ Partition $\mathbb{N}$ into four sets as follows:
 2. $\mathbb{E_1} = \\{ 5o-3 = 10k-8: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 5o-1 = 10k-6: k \in \mathbb{N} \\}$
 4. $\mathbb{E_c} = \\{ 5o+1 = 10k-4: k \in \mathbb{N} \\}$
-3. $\mathbb{E_3} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
+3. $\mathbb{E_4} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$
 
 
-**Note: I changed the subscript of $3n+1$ from $\\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_c}, \mathbb{E_a}\\}$ and of $5n+1$ from $\\{\mathbb{E_0}, \mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}, \mathbb{E_4}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_c}, \mathbb{E_3}, \mathbb{E_a}\\}$. There might be error carryover.**
+**Note: I changed the subscript of $3n+1$ from $\\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_c}, \mathbb{E_a}\\}$ and of $5n+1$ from $\\{\mathbb{E_0}, \mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}, \mathbb{E_4}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_c}, \mathbb{E_3}, \mathbb{E_a}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_c}, \mathbb{E_4}, \mathbb{E_a}\\}$. There might be error carryover.**
 
 **Every number can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
@@ -72,13 +72,13 @@ Furthermore $\mathbb{O}$ can be partitioned into $a$ subpartitions based on $L(n
 $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_a}, \mathbb{O_c}\\}$
 
 ### for 5n+1 (5 even + 5 odd)
-$\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{O_3}\\}$
+$\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{O_4}\\}$
 
 **Thoughts: May be there is another indexing schema that can make this into a proper partitioning?**
 
 ## Table with the partition for $3n+1$ and $5n+1$
 
-|	k	|	O:={o=2k-1}	|	$\mathbb{E_1}$={3o-1 = 6k-4}	|	$\mathbb{E_c}$={3o+1 = 6k-2}	|	$\mathbb{E_a}$={3o+3 = 6k}	|		|	k	|	O:={o=2k-1}	|	$\mathbb{E_1}$={5o-3 = 10k-8}	|	$\mathbb{E_2}$={5o-1 = 10k-6}	|	$\mathbb{E_c}$={5o+1 = 10k-4}	|	$\mathbb{E_3}$={5o+3 = 10k-2}	|	$\mathbb{E_a}$={5o+5 = 10k}	|
+|	k	|	O:={o=2k-1}	|	$\mathbb{E_1}$={3o-1 = 6k-4}	|	$\mathbb{E_c}$={3o+1 = 6k-2}	|	$\mathbb{E_a}$={3o+3 = 6k}	|		|	k	|	O:={o=2k-1}	|	$\mathbb{E_1}$={5o-3 = 10k-8}	|	$\mathbb{E_2}$={5o-1 = 10k-6}	|	$\mathbb{E_c}$={5o+1 = 10k-4}	|	$\mathbb{E_4}$={5o+3 = 10k-2}	|	$\mathbb{E_a}$={5o+5 = 10k}	|
 |	---	|	---	|----|---|---|---|----|----|----|----|----|----|----|
 |	1	|	1	|	2	|	4	|	6	|		|	1	|	1	|	2	|	4	|	6	|	8	|	10	|
 |	2	|	3	|	8	|	10	|	12	|		|	2	|	3	|	12	|	14	|	16	|	18	|	20	|
@@ -97,7 +97,7 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \math
 |	15	|	29	|	86	|	88	|	90	|		|	15	|	29	|	142	|	144	|	146	|	148	|	150	|
 
 ## Table with the subpartition of Odd Set for $3n+1$ and $5n+1$
-|	$\mathbb{O_1}$	|	$\mathbb{O_a}$	|	$\mathbb{O_c}$	|		|	$\mathbb{O_1}$	|	$\mathbb{O_c}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_3}$	|
+|	$\mathbb{O_1}$	|	$\mathbb{O_a}$	|	$\mathbb{O_c}$	|		|	$\mathbb{O_1}$	|	$\mathbb{O_c}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_4}$	|
 |	---	|	---	|---	|---	|---	|---	|---	|---	|---|
 |	1	|	3	|	5	|		|	1	|	3	|	5	|	7	|	9	|
 |	7	|	9	|	11	|		|	11	|	13	|	15	|	17	|	19	|
@@ -135,10 +135,10 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \math
 **3b. $L:\mathbb{E_2} \rightarrow \mathbb{O_2}$ for even $k$** 
 
 **4a. $L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for odd $k$**   
-**4b. $L:\mathbb{E_c} \rightarrow \mathbb{E_3}$ for even $k$** 
+**4b. $L:\mathbb{E_c} \rightarrow \mathbb{E_4}$ for even $k$** 
 
-**5a. $L:\mathbb{E_3} \rightarrow \mathbb{E_2}$ for odd $k$**   
-**5b. $L:\mathbb{E_3} \rightarrow \mathbb{O_3}$ for even $k$**  
+**5a. $L:\mathbb{E_4} \rightarrow \mathbb{E_2}$ for odd $k$**   
+**5b. $L:\mathbb{E_4} \rightarrow \mathbb{O_4}$ for even $k$**  
 
 **6a. $L:\mathbb{E_a} \rightarrow \mathbb{O_a}$ for odd $k$**   
 **6b. $L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
@@ -174,10 +174,10 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 **3b. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{O_2}] = (3k-2)/2$ for even $k$**  
 
 **4a. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{O_c}] = (3k-1)/2$ for odd $k$**   
-**4b. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{E_3}] = -(k/2)$ for even $k$**  
+**4b. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{E_4}] = -(k/2)$ for even $k$**  
  
-**5a. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{E_2}] = -(k+1)/2$ for odd $k$**   
-**5b. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{O_3}] = (3k/2)$ for even $k$**  
+**5a. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{E_2}] = -(k+1)/2$ for odd $k$**   
+**5b. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{O_4}] = (3k/2)$ for even $k$**  
 
 **6a. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{O_a}] = (3k+1)/2$ for odd $k$**   
 **6b. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{E_a}] = -(k/2)$ for even $k$**  
@@ -232,13 +232,102 @@ a. 1 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
 ## Known Cycle for 5n+1 (using 5 + 5)
 
 a. 1 $\rightarrow$ 6 $\rightarrow$ 3 $\rightarrow$ 16 $\rightarrow$ 8 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
-- $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\mathbb{O_1}$
+- $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\mathbb{O_1}$
 
 b. 13 $\rightarrow$ 66 $\rightarrow$ 33 $\rightarrow$ 166 $\rightarrow$ 83 $\rightarrow$ 416 $\rightarrow$ 208 $\rightarrow$ 104 $\rightarrow$ 52 $\rightarrow$ 26 $\rightarrow$ 13
-- $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$
+- $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$
 
 c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\rightarrow$ 54 $\rightarrow$ 27 $\rightarrow$ 136 $\rightarrow$ 68 $\rightarrow$ 34 $\rightarrow$ 17
-- $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$
+- $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$
+
+
+
+## Partition for $7n + 1$
+1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
+2. $\mathbb{E_1} = \\{ 7o-5 = 14k-12: k \in \mathbb{N} \\}$
+3. $\mathbb{E_2} = \\{ 7o-3 = 14k-10: k \in \mathbb{N} \\}$
+4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$
+5. $\mathbb{E_c} = \\{ 7o+1 = 14k-6: k \in \mathbb{N} \\}$
+6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$
+7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$
+8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$
+
+## Table for $7n+1$ 
+|	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_c}$	|	$\mathbb{E_5}$	|	$\mathbb{E_6}$	|	$\mathbb{E_a}$	|
+|		|		|		|		|		|		|		|		|		|
+|	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|
+|	2	|	3	|	16	|	18	|	20	|	22	|	24	|	26	|	28	|
+|	3	|	5	|	30	|	32	|	34	|	36	|	38	|	40	|	42	|
+|	4	|	7	|	44	|	46	|	48	|	50	|	52	|	54	|	56	|
+|	5	|	9	|	58	|	60	|	62	|	64	|	66	|	68	|	70	|
+|	6	|	11	|	72	|	74	|	76	|	78	|	80	|	82	|	84	|
+|	7	|	13	|	86	|	88	|	90	|	92	|	94	|	96	|	98	|
+|	8	|	15	|	100	|	102	|	104	|	106	|	108	|	110	|	112	|
+|	9	|	17	|	114	|	116	|	118	|	120	|	122	|	124	|	126	|
+|	10	|	19	|	128	|	130	|	132	|	134	|	136	|	138	|	140	|
+|	11	|	21	|	142	|	144	|	146	|	148	|	150	|	152	|	154	|
+|	12	|	23	|	156	|	158	|	160	|	162	|	164	|	166	|	168	|
+|	13	|	25	|	170	|	172	|	174	|	176	|	178	|	180	|	182	|
+|	14	|	27	|	184	|	186	|	188	|	190	|	192	|	194	|	196	|
+|	15	|	29	|	198	|	200	|	202	|	204	|	206	|	208	|	210	|
+
+|	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_5}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_c}$	|	$\mathbb{O_6}$	|
+|		|		|		|		|		|		|		|
+|	1	|	3	|	5	|	7	|	9	|	11	|	13	|
+|	15	|	17	|	19	|	21	|	23	|	25	|	27	|
+|	29	|	31	|	33	|	35	|	37	|	39	|	41	|
+|	43	|	45	|	47	|	49	|	51	|	53	|	55	|
+|	57	|	59	|	61	|	63	|	65	|	67	|	69	|
+|	71	|	73	|	75	|	77	|	79	|	81	|	83	|
+|	85	|	87	|	89	|	91	|	93	|	95	|	97	|
+|	99	|	101	|	103	|	105	|	107	|	109	|	111	|
+|	113	|	115	|	117	|	119	|	121	|	123	|	125	|
+
+## Partition for $9n + 1$
+1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
+2. $\mathbb{E_1} = \\{ 9o-7 = 18k-16: k \in \mathbb{N} \\}$
+3. $\mathbb{E_2} = \\{ 9o-5 = 18k-14: k \in \mathbb{N} \\}$
+4. $\mathbb{E_3} = \\{ 9o-3 = 18k-12: k \in \mathbb{N} \\}$ (This is of the form $3(6k-4)$, Therefore, cannot contain $2^p$)  
+5. $\mathbb{E_4} = \\{ 9o-1 = 18k-10: k \in \mathbb{N} \\}$ 
+6. $\mathbb{E_c} = \\{ 9o+1 = 18k-8: k \in \mathbb{N} \\}$
+7. $\mathbb{E_6} = \\{ 9o+3 = 18k-6: k \in \mathbb{N} \\}$ (This is of the form $3(6k-2)$, Therefore, cannot contain $2^p$)  
+8. $\mathbb{E_7} = \\{ 9o+5 = 18k-4: k \in \mathbb{N} \\}$
+9. $\mathbb{E_8} = \\{ 9o+7 = 18k-2: k \in \mathbb{N} \\}$
+10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$
+ 
+## Table for $9n+1$ (Note 9 is a not prime)
+
+|	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_4}$	|	$\mathbb{E_c}$	|	$\mathbb{E_6}$	|	$\mathbb{E_7}$	|	$\mathbb{E_8}$	|	$\mathbb{E_a}$	|
+|		|		|		|		|		|		|		|		|		|		|		|
+|	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|	16	|	18	|
+|	2	|	3	|	20	|	22	|	24	|	26	|	28	|	30	|	32	|	34	|	36	|
+|	3	|	5	|	38	|	40	|	42	|	44	|	46	|	48	|	50	|	52	|	54	|
+|	4	|	7	|	56	|	58	|	60	|	62	|	64	|	66	|	68	|	70	|	72	|
+|	5	|	9	|	74	|	76	|	78	|	80	|	82	|	84	|	86	|	88	|	90	|
+|	6	|	11	|	92	|	94	|	96	|	98	|	100	|	102	|	104	|	106	|	108	|
+|	7	|	13	|	110	|	112	|	114	|	116	|	118	|	120	|	122	|	124	|	126	|
+|	8	|	15	|	128	|	130	|	132	|	134	|	136	|	138	|	140	|	142	|	144	|
+|	9	|	17	|	146	|	148	|	150	|	152	|	154	|	156	|	158	|	160	|	162	|
+|	10	|	19	|	164	|	166	|	168	|	170	|	172	|	174	|	176	|	178	|	180	|
+|	11	|	21	|	182	|	184	|	186	|	188	|	190	|	192	|	194	|	196	|	198	|
+|	12	|	23	|	200	|	202	|	204	|	206	|	208	|	210	|	212	|	214	|	216	|
+|	13	|	25	|	218	|	220	|	222	|	224	|	226	|	228	|	230	|	232	|	234	|
+|	14	|	27	|	236	|	238	|	240	|	242	|	244	|	246	|	248	|	250	|	252	|
+|	15	|	29	|	254	|	256	|	258	|	260	|	262	|	264	|	266	|	268	|	270	|
+
+
+|	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_c}$	|	$\mathbb{O_7}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_4}$	|	$\mathbb{O_6}$	|	$\mathbb{O_8}$	|
+|		|		|		|		|		|		|		|		|		|
+|	1	|	3	|	5	|	7	|	9	|	11	|	13	|	15	|	17	|
+|	19	|	21	|	23	|	25	|	27	|	29	|	31	|	33	|	35	|
+|	37	|	39	|	41	|	43	|	45	|	47	|	49	|	51	|	53	|
+|	55	|	57	|	59	|	61	|	63	|	65	|	67	|	69	|	71	|
+|	73	|	75	|	77	|	79	|	81	|	83	|	85	|	87	|	89	|
+|	91	|	93	|	95	|	97	|	99	|	101	|	103	|	105	|	107	|
+|	109	|	111	|	113	|	115	|	117	|	119	|	121	|	123	|	125	|
+
+## Transition Graph for $7n+1$ and $9n+1$
+
 
 
 ## Appendix
