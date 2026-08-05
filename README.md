@@ -1,5 +1,5 @@
 # Visualizing Collatz-Conjecture via Partition
-
+- Dipesh Niraula 
 ## Problem Statement
 From [wiki](https://en.wikipedia.org/wiki/Collatz_conjecture)
 
@@ -39,14 +39,14 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
 3. The only way to get out is to land on a $2^n\$
 
-## Partitioning Method for 3n+1 (3 even + 1 odd)
+## Partitioning 3n+1 (3 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_c} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$
 
-## Partitioning Method for 5n+1 (5 even + 1 odd)
+## Partitioning 5n+1 (5 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 5o-3 = 10k-8: k \in \mathbb{N} \\}$
@@ -107,7 +107,7 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \math
 
 ## Property of the Partitions for $3n+1$
 
-**1. $U:\mathbb{O} \rightarrow \mathbb{E_2}$ for all $k$** 
+**1. $U:\mathbb{O} \rightarrow \mathbb{E_c}$ for all $k$** 
 
 **2a. $L:\mathbb{E_1} \rightarrow \mathbb{O_1}$ for odd $k$**   
 **2b. $L:\mathbb{E_1} \rightarrow \mathbb{E_c}$ for even $k$**  
@@ -146,32 +146,32 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 3. The transition from any Even set to another Even set decreases $k$.
 
 ### Transition Rule for $3n+1$  
-**1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_2}] = 0$ for all $k$**  
-**2a. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{O}] = (k-1)/2$ for odd $k$**   
-**2b. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{E_2}] = -(k/2)$ for even $k$**  
-**3a. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{E_1}] = -(k-1)/2$ for odd $k$**   
-**3b. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{O}] = (k/2)$ for even $k$**  
-**4a. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{O}] = (k+1)/2$ for odd $k$**   
-**5b. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{E_3}] = -(k/2)$ for even $k$**  
+**1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_c}] = 0$ for all $k$**  
+**2a. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{O_1}] = (k-1)/2$ for odd $k$**   
+**2b. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{E_c}] = -(k/2)$ for even $k$**  
+**3a. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{E_1}] = -(k-1)/2$ for odd $k$**   
+**3b. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{O_c}] = (k/2)$ for even $k$**  
+**4a. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{O_a}] = (k+1)/2$ for odd $k$**   
+**5b. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{E_a}] = -(k/2)$ for even $k$**  
  
 ### Transition Rule for $5n+1$ 
   
-**1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_2}] = 0$ for all $k$**
+**1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_c}] = 0$ for all $k$**
 
-**2a. $\Delta k [\mathbb{E_0} \rightarrow \mathbb{O}] = (3k-3)/2$ for odd $k$**   
-**2b. $\Delta k [\mathbb{E_0} \rightarrow \mathbb{E_2}] = -(k/2)$ for even $k$** 
+**2a. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{O_1}] = (3k-3)/2$ for odd $k$**   
+**2b. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{E_c}] = -(k/2)$ for even $k$** 
 
-**3a. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{E_0}] = -(k+1)/2$ for odd $k$**   
-**3b. $\Delta k [\mathbb{E_1} \rightarrow \mathbb{O}] = (3k-2)/2$ for even $k$**  
+**3a. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{E_1}] = -(k+1)/2$ for odd $k$**   
+**3b. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{O_2}] = (3k-2)/2$ for even $k$**  
 
-**4a. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{O}] = (3k-1)/2$ for odd $k$**   
-**4b. $\Delta k [\mathbb{E_2} \rightarrow \mathbb{E_3}] = -(k/2)$ for even $k$**  
+**4a. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{O_c}] = (3k-1)/2$ for odd $k$**   
+**4b. $\Delta k [\mathbb{E_c} \rightarrow \mathbb{E_3}] = -(k/2)$ for even $k$**  
  
-**5a. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{E_1}] = -(k+1)/2$ for odd $k$**   
-**5b. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{O}] = (3k/2)$ for even $k$**  
+**5a. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{E_2}] = -(k+1)/2$ for odd $k$**   
+**5b. $\Delta k [\mathbb{E_3} \rightarrow \mathbb{O_3}] = (3k/2)$ for even $k$**  
 
-**6a. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{O}] = (3k+1)/2$ for odd $k$**   
-**6b. $\Delta k [\mathbb{E_4} \rightarrow \mathbb{E_4}] = -(k/2)$ for even $k$**  
+**6a. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{O_a}] = (3k+1)/2$ for odd $k$**   
+**6b. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{E_a}] = -(k/2)$ for even $k$**  
 
 **Thoughts: Finding $\Delta K$ instead of $L(k)$ or $U(k)$ is overcomplicating an already overcomplicated problem**
 
