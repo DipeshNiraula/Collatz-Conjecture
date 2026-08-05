@@ -34,6 +34,7 @@ $$
 
 The Collatz conjecture is: This process will eventually reach the number 1, regardless of which positive integer is chosen initially. That is, for each $n$, there is some $i$ with $a_i = 1$.
 
+
 ## Some property
 1. $U(n):= an+1$ stretches the number line or equivalently $U(n) >n$, for odd $n$
 2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
@@ -58,11 +59,14 @@ Partition $\mathbb{N}$ into four sets as follows:
 3. $\mathbb{E_3} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$
 
+
+**I changed the subscript of $3n+1$ from $\\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_c}, \mathbb{E_a}\\}$ and of $5n+1$ from $\\{\mathbb{E_0}, \mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}, \mathbb{E_4}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_c}, \mathbb{E_3}, \mathbb{E_a}\\}$. There might be error carryover.**
+
 **Every number can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
 
 ## Sub-Partitioning $\mathbb{O}$ 
-Furthermore $\mathbb{O}$ can be partitioned into a partitions based on L(n) operation on $\mathbb E$ however I am not trying attempting index it.
+Furthermore $\mathbb{O}$ can be partitioned into $a$ subpartitions based on $L(n)$ mapping.
 
 ### for 3n+1 (3 even + 3 odd)
 $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_a}, \mathbb{O_c}\\}$
@@ -181,20 +185,22 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 <img src="3n.png" alt="Description" width="400">
 <img src="5n.png" alt="Description" width="600">
 
-Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer.
+Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$.
 
-# Observation
-## 1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$. 
-- If you are looking for a cycle, look else where.
-## 2a. Only the elements of partitions $\mathbb{E_c}$ can be landed from even and odd number.
-## 2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.
-## 2c. Every loop contains element from $\mathbb{E_c}$.
+## Observation
+**1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$.** 
+- Implication: When searching for a cycle, look elsewhere.
 
-## Example using Transition Rule for $3n+1$
+Seems like the following are related statements:  
+**2a. Only the elements of partitions $\mathbb{E_c}$ can be landed from even and odd number.**  
+**2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.**  
+**2c. Every loop contains element from $\mathbb{E_c}$.**  
 
-We pick a number (k=100, $\mathbb{E_3}$). The following is its transition.
+## Example using Transition Rule for $3n+1$ (3+1)
 
-|	Step	|	k	|	O	|	E1	|	E2	|	E3	|	Parity of k	|	$\Delta k$	|	n	|
+We pick a number ($k=100$, $\mathbb{E_a}$). The following is its transition.
+
+|	Step	|	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_c}$	|	$\mathbb{E_a}$	|	Parity of $k$	|	$\Delta k$	|	n	|
 |	---	|	---	|---		|	---	|	---	|---		|---		|---		|---		|
 |	1	|	100	|		|		|		|	X	|	even	|	$-(k/2)$	|	600	|
 |	2	|	50	|		|		|		|	X	|	even	|	$-(k/2)$	|	300	|
@@ -215,41 +221,58 @@ We pick a number (k=100, $\mathbb{E_3}$). The following is its transition.
 |	17	|	1	|		|	X	|		|		|	odd	|	$(k-1)/2$	|	2	|
 |	18	|	1	|	X	|		|		|		|		|		|	1	|
 
+## Known Cycle for 3n+1 (using 3 + 3)
+
+a. 1 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
+- $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_1}$ $\rightarrow$ $\mathbb{O_1}$
+
+## Known Cycle for 5n+1 (using 5 + 5)
+
+a. 1 $\rightarrow$ 6 $\rightarrow$ 3 $\rightarrow$ 16 $\rightarrow$ 8 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
+- $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\mathbb{O_1}$
+
+b. 13 $\rightarrow$ 66 $\rightarrow$ 33 $\rightarrow$ 166 $\rightarrow$ 83 $\rightarrow$ 416 $\rightarrow$ 208 $\rightarrow$ 104 $\rightarrow$ 52 $\rightarrow$ 26 $\rightarrow$ 13
+- $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$
+
+c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\rightarrow$ 54 $\rightarrow$ 27 $\rightarrow$ 136 $\rightarrow$ 68 $\rightarrow$ 34 $\rightarrow$ 17
+- $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_3}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$
+
+
 ## Appendix
 
 ## Property of the Partitions for 3n+1
 
 **Theorem 1**  
-**$U:\mathbb{O} \rightarrow \mathbb{E_2}$ for all $k$** (By construction)
+**$U:\mathbb{O} \rightarrow \mathbb{E_c}$ for all $k$** (By construction)
 
 **Theorem 2**  
- a. **$L:\mathbb{E_3} \rightarrow \mathbb{O}$ for odd $k$**   
- b. **$L:\mathbb{E_3} \rightarrow \mathbb{E_3}$ for even $k$**  
+ a. **$L:\mathbb{E_a} \rightarrow \mathbb{O_a}$ for odd $k$**   
+ b. **$L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
 
 Proof: $L(6k) = 3k$ 
 
 2a. for odd $k$, $k = 2m-1$ for $m \in \mathbb{N}$.  
-This means, $L(6k) = 6m-3 = 3(2m-1) \in \mathbb{O}$.  
+This means, $L(6k) = 6m-3 = 3(2m-1) \in \mathbb{O_a}$.  
 
 2b. for even $k$, $k = 2m$ for $m \in \mathbb{N}$.  
-This means, $L(6k) = 6m \in \mathbb{E_3}$.
+This means, $L(6k) = 6m \in \mathbb{E_a}$.
 
 **Theorem 3**  
- a. **$L:\mathbb{E_2} \rightarrow \mathbb{E_1}$ for odd $k$**   
- b. **$L:\mathbb{E_2} \rightarrow \mathbb{O}$ for even $k$**  
+ a. **$L:\mathbb{E_c} \rightarrow \mathbb{E_1}$ for odd $k$**   
+ b. **$L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for even $k$**  
 
 Follow the procedure of Theorem 2.
 
 **Theorem 4**  
- a. **$L:\mathbb{E_1} \rightarrow \mathbb{O}$ for odd $k$**   
- b. **$L:\mathbb{E_1} \rightarrow \mathbb{E_2}$ for even $k$**  
+ a. **$L:\mathbb{E_1} \rightarrow \mathbb{O_1}$ for odd $k$**   
+ b. **$L:\mathbb{E_1} \rightarrow \mathbb{E_c}$ for even $k$**  
 
 Follow the procedure of Theorem 2.
 
 **Not sure the relevance of Therem 5 to 7, but something I noticed.**
 
 **Theorem 5**   
- **$2^m \notin \mathbb{E_3}$ for all $m \in \mathbb{N}$**  
+ **$2^m \notin \mathbb{E_a}$ for all $m \in \mathbb{N}$**  
 Proof: By Contradiction.
 
 let, 
@@ -261,7 +284,7 @@ But $2^{n-1}$ is a product of only the prime number 2, so it's only prime diviso
 Contradition.  
 
 **Theorem 6**  
-**All $2^p$ for even $p$ lives in $\mathbb{E_2}$.**  
+**All $2^p$ for even $p$ lives in $\mathbb{E_c}$.**  
 i.e. $\\{2^p: p \, \text{even}\\} \subset \\{6k-2): k \in \mathbb{N}\\}$
 
 Proof:
@@ -295,7 +318,7 @@ Hence, $2^p = 6k-4$.
 
 **Note that $2^p$ for odd $p$ can be landed from only $2^p$ for even $p$.** 
 
-**For 5n+1, the observation about $2^p$ seems to be consistent with $3n+1$ but with added complexity. Eg: $2^n$ is missing from $E_4$.**
+**For 5n+1, the observation about $2^p$ seems to be consistent with $3n+1$ but with added complexity. Eg: $2^n$ is missing from $E_a$.**
 
 ## Intuition
 1. Considering the whole set of Natural Number ($\mathbb{N}$) felt more appropriate than studying the sequence itself. May be because this process is probabilistic (in some sense, eg: some number can be generated by both n/2 and 3n+1 process, while others cant)
