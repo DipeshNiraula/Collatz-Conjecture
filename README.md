@@ -44,7 +44,7 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 5. Applying this process on 5n+1 operation helps to see why they can diverge and lead to circular loop.
 
 ## Some property
-1. $U(n):= 3n+1$ stretches the number line or equivalently $U(n) >n$, for odd $n$
+1. $U(n):= an+1$ stretches the number line or equivalently $U(n) >n$, for odd $n$
 2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
 3. The only way to get of the operation is to land on a $2^n\$
 
