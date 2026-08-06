@@ -88,7 +88,10 @@ For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb
 Furthermore $\mathbb{O}$ can be partitioned into $a$ subpartitions based on $L(n)$ mapping.
 
 ### for 3n+1 (3 even + 3 odd)
-$\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_a}, \mathbb{O_c}\\}$
+$\mathbb{O} = \mathbb{O_1} \cap \mathbb{O_a} \cap \mathbb{O_c}$  
+$\mathbb{O_1} = \\{6m-5: m \in \mathbb{N}\\}$  
+$\mathbb{O_a} = \\{6m-3: m \in \mathbb{N}\\}$  
+$\mathbb{O_c} = \\{6m-1: m \in \mathbb{N}\\}$  
 
 ### for 5n+1 (5 even + 5 odd)
 $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \mathbb{O_4}\\}$
@@ -275,7 +278,10 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 ## Transition Graph for $7n+1$ and $9n+1$
 <img src="7n_9n.png" alt="Description" width="700">
 
-Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$. Red arrow halves the value and green arrows increases by $an+1$.
+- Probability of transition is given in red and $\Delta k$ is given in blue.
+- Note that $\Delta k$ must be integer which clarifies the parity of $k$.
+- Red arrow halves the value of number and green arrows increases the value of number by $an+1$.
+- However, note that in this scheme, the transition from Odd set to $\mathbb{E_c}$ leaves the index $k$ unchanged and transition from Even to Odd partition increases the value of index $k$.
 
 ## Observation (General)
 **1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$.** 
@@ -422,28 +428,36 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 **$U:\mathbb{O} \rightarrow \mathbb{E_c}$ for all $k$** (By construction)
 
 **Theorem 2**  
+ a. **$L:\mathbb{E_1} \rightarrow \mathbb{O_1}$ for odd $k$**   
+ b. **$L:\mathbb{E_1} \rightarrow \mathbb{E_c}$ for even $k$**  
+
+2a. for odd $k$, $k = 2m-1$ for $m \in \mathbb{N}$.  
+This means, $L(6k-4) = L(12m-10) = (12m-10)/2 = 6m-5 \in \mathbb{O_1}$.  
+
+2b. for even $k$, $k = 2m$ for $m \in \mathbb{N}$.  
+This means, $L(6k-4) = L(12m-4) = (12m-4)/2 = 6m-2 \in \mathbb{E_c}$.
+
+**Theorem 3**  
+ a. **$L:\mathbb{E_c} \rightarrow \mathbb{E_1}$ for odd $k$**   
+ b. **$L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for even $k$**  
+
+3a. for odd $k$, $k = 2m-1$ for $m \in \mathbb{N}$.  
+This means, $L(6k-2) = L(12m-4) = (12m-4)/2 = 6m-2 \in \mathbb{E_1}$.  
+
+3b. for even $k$, $k = 2m$ for $m \in \mathbb{N}$.  
+This means, $L(6k-2) = L(12m-2) = (12m-2)/2 = 6m-1 \in \mathbb{O_c}$.  
+
+**Theorem 4**  
  a. **$L:\mathbb{E_a} \rightarrow \mathbb{O_a}$ for odd $k$**   
  b. **$L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
 
 Proof: $L(6k) = 3k$ 
 
 2a. for odd $k$, $k = 2m-1$ for $m \in \mathbb{N}$.  
-This means, $L(6k) = 6m-3 = 3(2m-1) \in \mathbb{O_a}$.  
+This means, $L(6k) = L(12m-6) = (12m-6)/2 = 6m-3 \in \mathbb{O_a}$.  
 
 2b. for even $k$, $k = 2m$ for $m \in \mathbb{N}$.  
-This means, $L(6k) = 6m \in \mathbb{E_a}$.
-
-**Theorem 3**  
- a. **$L:\mathbb{E_c} \rightarrow \mathbb{E_1}$ for odd $k$**   
- b. **$L:\mathbb{E_c} \rightarrow \mathbb{O_c}$ for even $k$**  
-
-Follow the procedure of Theorem 2.
-
-**Theorem 4**  
- a. **$L:\mathbb{E_1} \rightarrow \mathbb{O_1}$ for odd $k$**   
- b. **$L:\mathbb{E_1} \rightarrow \mathbb{E_c}$ for even $k$**  
-
-Follow the procedure of Theorem 2.
+This means, $L(6k) = L(12m) = 12m/2 = 6m \in \mathbb{E_a}$.
 
 **Not sure the relevance of Therem 5 to 7, but something I noticed.**
 
