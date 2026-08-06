@@ -43,14 +43,14 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 ## Partitioning Even set into $a$ partitions
 The following method will generate disjoint partitions that spans $\mathbb{N}$ and the relation between index $k$ and odd number $o$ remains the same for all $an+1$ partitions. This partitioning system helps in comparing the transitions. Subscripts $c$ stands for collatz and subscript $a$ from $an+1$. As you will see these are special partitions. 
 
-### 3n+1 (3 even + 1 odd)
+### $3n+1$ (3 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_c} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
 
-### 5n+1 (5 even + 1 odd)
+### $5n+1$ (5 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 5o-3 = 10k-8: k \in \mathbb{N} \\}$
@@ -58,6 +58,28 @@ Partition $\mathbb{N}$ into four sets as follows:
 4. $\mathbb{E_c} = \\{ 5o+1 = 10k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_4} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
+
+### $7n + 1$ (7 even + 1 odd)
+1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
+2. $\mathbb{E_1} = \\{ 7o-5 = 14k-12: k \in \mathbb{N} \\}$
+3. $\mathbb{E_2} = \\{ 7o-3 = 14k-10: k \in \mathbb{N} \\}$
+4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$ (Doesn't contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-4 \equiv 3$ (mod7))
+5. $\mathbb{E_c} = \\{ 7o+1 = 14k-6: k \in \mathbb{N} \\}$
+6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-2 \equiv 5$ (mod7))
+7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-1\equiv 6$ (mod7))
+8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
+
+### $9n + 1$ (9 even + 1 odd)
+1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
+2. $\mathbb{E_1} = \\{ 9o-7 = 18k-16: k \in \mathbb{N} \\}$
+3. $\mathbb{E_2} = \\{ 9o-5 = 18k-14: k \in \mathbb{N} \\}$
+4. $\mathbb{E_3} = \\{ 9o-3 = 18k-12: k \in \mathbb{N} \\}$ (This is of the form $3(6k-4)$, Therefore, cannot contain $2^n$)  
+5. $\mathbb{E_4} = \\{ 9o-1 = 18k-10: k \in \mathbb{N} \\}$ 
+6. $\mathbb{E_c} = \\{ 9o+1 = 18k-8: k \in \mathbb{N} \\}$
+7. $\mathbb{E_6} = \\{ 9o+3 = 18k-6: k \in \mathbb{N} \\}$ (This is of the form $3(6k-2)$, Therefore, cannot contain $2^n$)  
+8. $\mathbb{E_7} = \\{ 9o+5 = 18k-4: k \in \mathbb{N} \\}$
+9. $\mathbb{E_8} = \\{ 9o+7 = 18k-2: k \in \mathbb{N} \\}$
+10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$ (Doesn't contain $2^n$)
 
 **Every number can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
@@ -106,6 +128,71 @@ $\mathbb{O}$ = $\\{\mathbb{O_1}, \mathbb{O_c}, \mathbb{O_a}, \mathbb{O_2}, \math
 |	43	|	45	|	47	|		|	71	|	73	|	75	|	77	|	79	|
 |	49	|	51	|	53	|		|	81	|	83	|	85	|	87	|	89	|
 |	55	|	57	|	59	|		|	91	|	93	|	95	|	97	|	99	|
+
+### Table for $7n+1$
+
+|	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_c}$	|	$\mathbb{E_5}$	|	$\mathbb{E_6}$	|	$\mathbb{E_a}$	|
+|	---	|	---	|---		|---		|	---	|	---	|---		|	---	|	---	|
+|	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|
+|	2	|	3	|	16	|	18	|	20	|	22	|	24	|	26	|	28	|
+|	3	|	5	|	30	|	32	|	34	|	36	|	38	|	40	|	42	|
+|	4	|	7	|	44	|	46	|	48	|	50	|	52	|	54	|	56	|
+|	5	|	9	|	58	|	60	|	62	|	64	|	66	|	68	|	70	|
+|	6	|	11	|	72	|	74	|	76	|	78	|	80	|	82	|	84	|
+|	7	|	13	|	86	|	88	|	90	|	92	|	94	|	96	|	98	|
+|	8	|	15	|	100	|	102	|	104	|	106	|	108	|	110	|	112	|
+|	9	|	17	|	114	|	116	|	118	|	120	|	122	|	124	|	126	|
+|	10	|	19	|	128	|	130	|	132	|	134	|	136	|	138	|	140	|
+|	11	|	21	|	142	|	144	|	146	|	148	|	150	|	152	|	154	|
+|	12	|	23	|	156	|	158	|	160	|	162	|	164	|	166	|	168	|
+|	13	|	25	|	170	|	172	|	174	|	176	|	178	|	180	|	182	|
+|	14	|	27	|	184	|	186	|	188	|	190	|	192	|	194	|	196	|
+|	15	|	29	|	198	|	200	|	202	|	204	|	206	|	208	|	210	|
+
+|	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_5}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_c}$	|	$\mathbb{O_6}$	|
+|	---	|	---	|---		|	---	|	---	|	---	|	---	|
+|	1	|	3	|	5	|	7	|	9	|	11	|	13	|
+|	15	|	17	|	19	|	21	|	23	|	25	|	27	|
+|	29	|	31	|	33	|	35	|	37	|	39	|	41	|
+|	43	|	45	|	47	|	49	|	51	|	53	|	55	|
+|	57	|	59	|	61	|	63	|	65	|	67	|	69	|
+|	71	|	73	|	75	|	77	|	79	|	81	|	83	|
+|	85	|	87	|	89	|	91	|	93	|	95	|	97	|
+|	99	|	101	|	103	|	105	|	107	|	109	|	111	|
+|	113	|	115	|	117	|	119	|	121	|	123	|	125	|
+ 
+### Table for $9n+1$ 
+
+Note: 9 is not a prime, and may behave differently.
+
+|	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_4}$	|	$\mathbb{E_c}$	|	$\mathbb{E_6}$	|	$\mathbb{E_7}$	|	$\mathbb{E_8}$	|	$\mathbb{E_a}$	|
+|	---	|---		|	---	|---		|	---	|	---	|---		|---		|	---	|	---	|---		|
+|	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|	16	|	18	|
+|	2	|	3	|	20	|	22	|	24	|	26	|	28	|	30	|	32	|	34	|	36	|
+|	3	|	5	|	38	|	40	|	42	|	44	|	46	|	48	|	50	|	52	|	54	|
+|	4	|	7	|	56	|	58	|	60	|	62	|	64	|	66	|	68	|	70	|	72	|
+|	5	|	9	|	74	|	76	|	78	|	80	|	82	|	84	|	86	|	88	|	90	|
+|	6	|	11	|	92	|	94	|	96	|	98	|	100	|	102	|	104	|	106	|	108	|
+|	7	|	13	|	110	|	112	|	114	|	116	|	118	|	120	|	122	|	124	|	126	|
+|	8	|	15	|	128	|	130	|	132	|	134	|	136	|	138	|	140	|	142	|	144	|
+|	9	|	17	|	146	|	148	|	150	|	152	|	154	|	156	|	158	|	160	|	162	|
+|	10	|	19	|	164	|	166	|	168	|	170	|	172	|	174	|	176	|	178	|	180	|
+|	11	|	21	|	182	|	184	|	186	|	188	|	190	|	192	|	194	|	196	|	198	|
+|	12	|	23	|	200	|	202	|	204	|	206	|	208	|	210	|	212	|	214	|	216	|
+|	13	|	25	|	218	|	220	|	222	|	224	|	226	|	228	|	230	|	232	|	234	|
+|	14	|	27	|	236	|	238	|	240	|	242	|	244	|	246	|	248	|	250	|	252	|
+|	15	|	29	|	254	|	256	|	258	|	260	|	262	|	264	|	266	|	268	|	270	|
+
+
+|	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_c}$	|	$\mathbb{O_7}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_4}$	|	$\mathbb{O_6}$	|	$\mathbb{O_8}$	|
+|	---	|	---	|	---	|	---	|---		|---		|	---	|---		|---		|
+|	1	|	3	|	5	|	7	|	9	|	11	|	13	|	15	|	17	|
+|	19	|	21	|	23	|	25	|	27	|	29	|	31	|	33	|	35	|
+|	37	|	39	|	41	|	43	|	45	|	47	|	49	|	51	|	53	|
+|	55	|	57	|	59	|	61	|	63	|	65	|	67	|	69	|	71	|
+|	73	|	75	|	77	|	79	|	81	|	83	|	85	|	87	|	89	|
+|	91	|	93	|	95	|	97	|	99	|	101	|	103	|	105	|	107	|
+|	109	|	111	|	113	|	115	|	117	|	119	|	121	|	123	|	125	|
 
 
 ## Property of the Partitions for $3n+1$
@@ -185,6 +272,9 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 <img src="3n_v2.png" alt="Description" width="600">
 <img src="5n_v2.png" alt="Description" width="700">
 
+## Transition Graph for $7n+1$ and $9n+1$
+<img src="7n_9n.png" alt="Description" width="700">
+
 Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$. Red arrow halves the value and green arrows increases by $an+1$.
 
 ## Observation (General)
@@ -196,7 +286,93 @@ Seems like the following are related statements:
 **2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.**  
 **2c. Every loop contains element from $\mathbb{E_c}$.**  
 
-### Example using Transition Rule for $3n+1$ (3+1)
+**3. Even partitions without $2^n$ can't form a loop with or connect to partitions with $2^p$**
+
+## Observation (Specific).
+**1: For $7n+1$, if searching for cycles, exclude from the search the following partitions: $\mathbb{E_a}$, $\mathbb{O_a}$, $\mathbb{E_5}$, $\mathbb{O_5}$, $\mathbb{E_6}$, $\mathbb{O_6}$, $\mathbb{E_3}$, and $\mathbb{O_3}$.**  
+**2: For $9n+1$, if searching for cycles, exclude from the search the following partitions: $\mathbb{E_a}$, $\mathbb{O_a}$, $\mathbb{E_6}$, $\mathbb{O_6}$, $\mathbb{E_3}$, and $\mathbb{O_3}$.**
+
+## Theorem for $3n+1$
+**If a computer can compute upto l collatz operations, we can always pick a number that will exceed l operation without reaching to 1.**
+
+If $l$ is even, pick the following number,
+
+$$ 
+n = (k=2^{(l/2)}, \mathbb{O_c})
+$$ 
+
+If $l$ is odd, pick the following number,
+
+$$ 
+n = (k=2^{(l+1)/2}, \mathbb{O_c})
+$$ 
+
+Let's, denote the exponent $q$ and index with step no 0.
+
+Then 
+
+$$
+n_0 = (k_0 = 2^q, \mathbb{O_c})
+$$. 
+
+Note that $k_0 \eqiv 0$ (mod 2) and thus is even.
+
+$\mathbb{O_c}$ will always transition to $\mathbb{E_c}$ with no change in $k$ because of the transition rule:
+
+$$
+$\Delta k [\mathbb{O_c} \rightarrow \mathbb{E_c}] = 0)$ \text{for any} $k$.
+$$
+
+Therefore, after 1 operation,
+
+$$
+k_1 \leftarrow k_0 = 2^{q-1}
+$$
+
+and 
+
+$$
+n_1 = (k_1=2^q, \mathbb{E_c})
+$$
+
+Because $k_1 = 2^q \equiv 0$ (mod 2) and thus is even, $\mathbb{E_c}$ will transition to $\mathbb{O_c}$. The change in $k$ is given by the transition rule: 
+
+$$
+\Delta k [\mathbb{E_c} \rightarrow \mathbb{O_c}] = (k/2) \text{for even} k
+$$
+
+After 2 operations $k$ becomes:
+
+$$
+k_2 = \leftarrow (3k_1/2)$ = 3^1 \times 2^{q-1}
+$$
+
+and,
+
+$$
+n_2 = (k_2=3^1 \times 2^q, \mathbb{O_c})
+$$
+
+Transition $\mathbb{O_c} \rightarrow \mathbb{E_c} \rightarrow \mathbb{O_c}$ repeats until $k$ is even. 
+
+$k$ remains divisible by 2 until $2q$ operations after which $k$ becomes.
+
+$$
+k_{2q} \leftarrow (3k_{2q-1}/2)$ = 3^{2q} \times 2^{q-q} = 3^{2q} 
+$$
+
+and 
+
+$$
+n_{2q} = (3^{2q}, \mathbb{E_c})
+$$
+
+Note that n = 1 in partitional form is equal to $(1, \mathbb{E_1}) \neq (3^{2q}, \mathbb{E_c})$.
+
+proved.
+
+-------------------------------------------------------------------------------------------------------------------------------
+## Example using Transition Rule for $3n+1$ (3+1)
 
 We pick a number ($k=100$, $\mathbb{E_a}$). The following is its transition.
 
@@ -236,101 +412,6 @@ b. 13 $\rightarrow$ 66 $\rightarrow$ 33 $\rightarrow$ 166 $\rightarrow$ 83 $\rig
 
 c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\rightarrow$ 54 $\rightarrow$ 27 $\rightarrow$ 136 $\rightarrow$ 68 $\rightarrow$ 34 $\rightarrow$ 17
 - $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{O_2}$
-
-### Partition for $7n + 1$
-1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
-2. $\mathbb{E_1} = \\{ 7o-5 = 14k-12: k \in \mathbb{N} \\}$
-3. $\mathbb{E_2} = \\{ 7o-3 = 14k-10: k \in \mathbb{N} \\}$
-4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$ (Doesn't contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-4 \equiv 3$ (mod7))
-5. $\mathbb{E_c} = \\{ 7o+1 = 14k-6: k \in \mathbb{N} \\}$
-6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-2 \equiv 5$ (mod7))
-7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-1\equiv 6$ (mod7))
-8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
-
-### Table for $7n+1$
-
-|	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_c}$	|	$\mathbb{E_5}$	|	$\mathbb{E_6}$	|	$\mathbb{E_a}$	|
-|	---	|	---	|---		|---		|	---	|	---	|---		|	---	|	---	|
-|	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|
-|	2	|	3	|	16	|	18	|	20	|	22	|	24	|	26	|	28	|
-|	3	|	5	|	30	|	32	|	34	|	36	|	38	|	40	|	42	|
-|	4	|	7	|	44	|	46	|	48	|	50	|	52	|	54	|	56	|
-|	5	|	9	|	58	|	60	|	62	|	64	|	66	|	68	|	70	|
-|	6	|	11	|	72	|	74	|	76	|	78	|	80	|	82	|	84	|
-|	7	|	13	|	86	|	88	|	90	|	92	|	94	|	96	|	98	|
-|	8	|	15	|	100	|	102	|	104	|	106	|	108	|	110	|	112	|
-|	9	|	17	|	114	|	116	|	118	|	120	|	122	|	124	|	126	|
-|	10	|	19	|	128	|	130	|	132	|	134	|	136	|	138	|	140	|
-|	11	|	21	|	142	|	144	|	146	|	148	|	150	|	152	|	154	|
-|	12	|	23	|	156	|	158	|	160	|	162	|	164	|	166	|	168	|
-|	13	|	25	|	170	|	172	|	174	|	176	|	178	|	180	|	182	|
-|	14	|	27	|	184	|	186	|	188	|	190	|	192	|	194	|	196	|
-|	15	|	29	|	198	|	200	|	202	|	204	|	206	|	208	|	210	|
-
-|	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_5}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_c}$	|	$\mathbb{O_6}$	|
-|	---	|	---	|---		|	---	|	---	|	---	|	---	|
-|	1	|	3	|	5	|	7	|	9	|	11	|	13	|
-|	15	|	17	|	19	|	21	|	23	|	25	|	27	|
-|	29	|	31	|	33	|	35	|	37	|	39	|	41	|
-|	43	|	45	|	47	|	49	|	51	|	53	|	55	|
-|	57	|	59	|	61	|	63	|	65	|	67	|	69	|
-|	71	|	73	|	75	|	77	|	79	|	81	|	83	|
-|	85	|	87	|	89	|	91	|	93	|	95	|	97	|
-|	99	|	101	|	103	|	105	|	107	|	109	|	111	|
-|	113	|	115	|	117	|	119	|	121	|	123	|	125	|
-
-### Partition for $9n + 1$
-1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
-2. $\mathbb{E_1} = \\{ 9o-7 = 18k-16: k \in \mathbb{N} \\}$
-3. $\mathbb{E_2} = \\{ 9o-5 = 18k-14: k \in \mathbb{N} \\}$
-4. $\mathbb{E_3} = \\{ 9o-3 = 18k-12: k \in \mathbb{N} \\}$ (This is of the form $3(6k-4)$, Therefore, cannot contain $2^n$)  
-5. $\mathbb{E_4} = \\{ 9o-1 = 18k-10: k \in \mathbb{N} \\}$ 
-6. $\mathbb{E_c} = \\{ 9o+1 = 18k-8: k \in \mathbb{N} \\}$
-7. $\mathbb{E_6} = \\{ 9o+3 = 18k-6: k \in \mathbb{N} \\}$ (This is of the form $3(6k-2)$, Therefore, cannot contain $2^n$)  
-8. $\mathbb{E_7} = \\{ 9o+5 = 18k-4: k \in \mathbb{N} \\}$
-9. $\mathbb{E_8} = \\{ 9o+7 = 18k-2: k \in \mathbb{N} \\}$
-10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$ (Doesn't contain $2^n$)
- 
-### Table for $9n+1$ 
-
-Note: 9 is not a prime, and may behave differently.
-
-|	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_4}$	|	$\mathbb{E_c}$	|	$\mathbb{E_6}$	|	$\mathbb{E_7}$	|	$\mathbb{E_8}$	|	$\mathbb{E_a}$	|
-|	---	|---		|	---	|---		|	---	|	---	|---		|---		|	---	|	---	|---		|
-|	1	|	1	|	2	|	4	|	6	|	8	|	10	|	12	|	14	|	16	|	18	|
-|	2	|	3	|	20	|	22	|	24	|	26	|	28	|	30	|	32	|	34	|	36	|
-|	3	|	5	|	38	|	40	|	42	|	44	|	46	|	48	|	50	|	52	|	54	|
-|	4	|	7	|	56	|	58	|	60	|	62	|	64	|	66	|	68	|	70	|	72	|
-|	5	|	9	|	74	|	76	|	78	|	80	|	82	|	84	|	86	|	88	|	90	|
-|	6	|	11	|	92	|	94	|	96	|	98	|	100	|	102	|	104	|	106	|	108	|
-|	7	|	13	|	110	|	112	|	114	|	116	|	118	|	120	|	122	|	124	|	126	|
-|	8	|	15	|	128	|	130	|	132	|	134	|	136	|	138	|	140	|	142	|	144	|
-|	9	|	17	|	146	|	148	|	150	|	152	|	154	|	156	|	158	|	160	|	162	|
-|	10	|	19	|	164	|	166	|	168	|	170	|	172	|	174	|	176	|	178	|	180	|
-|	11	|	21	|	182	|	184	|	186	|	188	|	190	|	192	|	194	|	196	|	198	|
-|	12	|	23	|	200	|	202	|	204	|	206	|	208	|	210	|	212	|	214	|	216	|
-|	13	|	25	|	218	|	220	|	222	|	224	|	226	|	228	|	230	|	232	|	234	|
-|	14	|	27	|	236	|	238	|	240	|	242	|	244	|	246	|	248	|	250	|	252	|
-|	15	|	29	|	254	|	256	|	258	|	260	|	262	|	264	|	266	|	268	|	270	|
-
-
-|	$\mathbb{O_1}$	|	$\mathbb{O_3}$	|	$\mathbb{O_c}$	|	$\mathbb{O_7}$	|	$\mathbb{O_a}$	|	$\mathbb{O_2}$	|	$\mathbb{O_4}$	|	$\mathbb{O_6}$	|	$\mathbb{O_8}$	|
-|	---	|	---	|	---	|	---	|---		|---		|	---	|---		|---		|
-|	1	|	3	|	5	|	7	|	9	|	11	|	13	|	15	|	17	|
-|	19	|	21	|	23	|	25	|	27	|	29	|	31	|	33	|	35	|
-|	37	|	39	|	41	|	43	|	45	|	47	|	49	|	51	|	53	|
-|	55	|	57	|	59	|	61	|	63	|	65	|	67	|	69	|	71	|
-|	73	|	75	|	77	|	79	|	81	|	83	|	85	|	87	|	89	|
-|	91	|	93	|	95	|	97	|	99	|	101	|	103	|	105	|	107	|
-|	109	|	111	|	113	|	115	|	117	|	119	|	121	|	123	|	125	|
-
-## Transition Graph for $7n+1$ and $9n+1$
-<img src="7n_9n.png" alt="Description" width="700">
-
-## Observation 
-**1: For $7n+1$, if searching for cycles, exclude from the search the following partitions: $\mathbb{E_a}$, $\mathbb{O_a}$, $\mathbb{E_5}$, $\mathbb{O_5}$, $\mathbb{E_6}$, $\mathbb{O_6}$, $\mathbb{E_3}$, and $\mathbb{O_3}$.**
-
-**2: For $9n+1$, if searching for cycles, exclude from the search the following partitions: $\mathbb{E_a}$, $\mathbb{O_a}$, $\mathbb{E_6}$, $\mathbb{O_6}$, $\mathbb{E_3}$, and $\mathbb{O_3}$.**
 
 ## Appendix
 
