@@ -48,7 +48,7 @@ Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_c} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
-4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$
+4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$)
 
 ### 5n+1 (5 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
@@ -57,7 +57,7 @@ Partition $\mathbb{N}$ into four sets as follows:
 3. $\mathbb{E_2} = \\{ 5o-1 = 10k-6: k \in \mathbb{N} \\}$
 4. $\mathbb{E_c} = \\{ 5o+1 = 10k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_4} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
-4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$
+4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$)
 
 **Every number can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
@@ -241,13 +241,13 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 7o-5 = 14k-12: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 7o-3 = 14k-10: k \in \mathbb{N} \\}$
-4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$
+4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$(Doesn't contain $2^p$, $2^p$ (mod7) results in {1,2,4...}, -4$\equiv$3$ (mod3))
 5. $\mathbb{E_c} = \\{ 7o+1 = 14k-6: k \in \mathbb{N} \\}$
-6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$
-7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$
-8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$
+6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$(Doesnt contain $2^p$, $2^p$ (mod7) results in {1,2,4...}, -2$\equiv$5$ (mod3))
+7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$(Doesnt contain $2^p$, $2^p$ (mod7) results in {1,2,4...}, -1$\equiv$6$ (mod3))
+8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$)
 
-### Table for $7n+1$ 
+### Table for $7n+1$
 
 |	$k$	|	$\mathbb{O}$	|	$\mathbb{E_1}$	|	$\mathbb{E_2}$	|	$\mathbb{E_3}$	|	$\mathbb{E_c}$	|	$\mathbb{E_5}$	|	$\mathbb{E_6}$	|	$\mathbb{E_a}$	|
 |	---	|	---	|---		|---		|	---	|	---	|---		|	---	|	---	|
@@ -289,7 +289,7 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 7. $\mathbb{E_6} = \\{ 9o+3 = 18k-6: k \in \mathbb{N} \\}$ (This is of the form $3(6k-2)$, Therefore, cannot contain $2^p$)  
 8. $\mathbb{E_7} = \\{ 9o+5 = 18k-4: k \in \mathbb{N} \\}$
 9. $\mathbb{E_8} = \\{ 9o+7 = 18k-2: k \in \mathbb{N} \\}$
-10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$
+10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$ (Doesn't contain $2^p$)
  
 ### Table for $9n+1$ 
 
