@@ -293,12 +293,12 @@ Seems like the following are related statements:
 **2: For $9n+1$, if searching for cycles, exclude from the search the following partitions: $\mathbb{E_a}$, $\mathbb{O_a}$, $\mathbb{E_6}$, $\mathbb{O_6}$, $\mathbb{E_3}$, and $\mathbb{O_3}$.**
 
 ## Theorem for $3n+1$
-**If a computer can compute upto l collatz operations, we can always pick a number that will exceed l operation without reaching to 1.**
+**If a computer can compute upto $l$ collatz operations, we can always pick a number that will exceed $l$ operation without reaching to 1.**
 
 If $l$ is even, pick the following number,
 
 $$ 
-n = (k=2^{(l/2)}, \mathbb{O_c})
+n = (k=2^{l/2}, \mathbb{O_c})
 $$ 
 
 If $l$ is odd, pick the following number,
@@ -307,26 +307,27 @@ $$
 n = (k=2^{(l+1)/2}, \mathbb{O_c})
 $$ 
 
-Let's, denote the exponent $q$ and index with step no 0.
+Let's, denote the positive integer exponent by $q$ and index with step no 0.
 
-Then 
+Then, 
 
 $$
 n_0 = (k_0 = 2^q, \mathbb{O_c})
-$$. 
+$$
 
-Note that $k_0 \eqiv 0$ (mod 2) and thus is even.
+
+Note that $k_0 \equiv 0$ (mod 2) and thus is even.
 
 $\mathbb{O_c}$ will always transition to $\mathbb{E_c}$ with no change in $k$ because of the transition rule:
 
 $$
-$\Delta k [\mathbb{O_c} \rightarrow \mathbb{E_c}] = 0)$ \text{for any} $k$.
+\Delta k \[\mathbb{O_c} \rightarrow \mathbb{E_c}\] = 0 \quad \text{for any} \quad k
 $$
 
 Therefore, after 1 operation,
 
 $$
-k_1 \leftarrow k_0 = 2^{q-1}
+k_1 \leftarrow k_0 = 2^q
 $$
 
 and 
@@ -338,22 +339,22 @@ $$
 Because $k_1 = 2^q \equiv 0$ (mod 2) and thus is even, $\mathbb{E_c}$ will transition to $\mathbb{O_c}$. The change in $k$ is given by the transition rule: 
 
 $$
-\Delta k [\mathbb{E_c} \rightarrow \mathbb{O_c}] = (k/2) \text{for even} k
+\Delta k \[\mathbb{E_c} \rightarrow \mathbb{O_c}\] = (k/2) \quad \text{for even} \quad k
 $$
 
 After 2 operations $k$ becomes:
 
 $$
-k_2 = \leftarrow (3k_1/2)$ = 3^1 \times 2^{q-1}
+k_2 \leftarrow (3k_1/2) = 3^1 \cdot 2^{q-1}
 $$
 
 and,
 
 $$
-n_2 = (k_2=3^1 \times 2^q, \mathbb{O_c})
+n_2 = (k_2=3^1 \cdot 2^{q-1}, \mathbb{O_c})
 $$
 
-Transition $\mathbb{O_c} \rightarrow \mathbb{E_c} \rightarrow \mathbb{O_c}$ repeats until $k$ is even. 
+Transition $\mathbb{O_c} \rightarrow \mathbb{E_c} \rightarrow \mathbb{O_c}$ repeats as long as $k$ is even. 
 
 $k$ remains divisible by 2 until $2q$ operations after which $k$ becomes.
 
