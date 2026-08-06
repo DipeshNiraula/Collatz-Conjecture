@@ -56,9 +56,9 @@ $\mathbb{O}$ can be divided into $3$ subpartitions based on $L(n)$ mapping as fo
 
 $\mathbb{O} = \mathbb{O_1} \cap \mathbb{O_a} \cap \mathbb{O_c}$
 
-1. $\mathbb{O_1} = {6m-5: m \in \mathbb{N}}$
-2. $\mathbb{O_a} = {6m-3: m \in \mathbb{N}}$
-3. $\mathbb{O_c} = {6m-1: m \in \mathbb{N}}$
+1. $\mathbb{O_1} = \\{6m-5: m \in \mathbb{N}\\}$
+2. $\mathbb{O_a} = \\{6m-3: m \in \mathbb{N}\\}$
+5. $\mathbb{O_c} = {6m-1: m \in \mathbb{N}\\}$
 
 **Every natural number $n$ can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $1 = (1, \mathbb{O_c})$, $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$.
@@ -239,7 +239,7 @@ This means, $L(6k) = L(12m) = 12m/2 = 6m \in \mathbb{E_a}$.
 
 ## (3 + 1) Partition Table
 |	$k$	|	$\mathbb{O}:=\\{o=2k-1\\}$	|	$\mathbb{E_1}=\\{3o-1 = 6k-4\\}$	|	$\mathbb{E_c}=\\{3o+1 = 6k-2\\}$	|	$\mathbb{E_a}=\\{3o+3 = 6k\\}$	|
-|		|		|		|		|		|
+|	---	|	---	|---		|	---	|	---	|
 |	1	|	1	|	2	|	4	|	6	|
 |	2	|	3	|	8	|	10	|	12	|
 |	3	|	5	|	14	|	16	|	18	|
@@ -268,7 +268,7 @@ This means, $L(6k) = L(12m) = 12m/2 = 6m \in \mathbb{E_a}$.
 
 ## Sub Partition Table
 |	$\mathbb{O_1}:=\\{6m-5\\}$	|	$\mathbb{O_a}:=\\{6m-3\\}$	|	$\mathbb{O_c}:=\\{6m-1\\}$	|
-|		|		|		|
+|	---	|---	| ---	|
 |	1	|	3	|	5	|
 |	7	|	9	|	11	|
 |	13	|	15	|	17	|
