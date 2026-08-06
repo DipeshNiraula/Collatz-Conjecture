@@ -76,13 +76,6 @@ For eg: in $3n+1$, Natural number $1 = (1, \mathbb{O_c})$, $12 = (2, \mathbb{E_a
 **4a. $L:\mathbb{E_a} \rightarrow \mathbb{O_a}$ for odd $k$**   
 **4b. $L:\mathbb{E_a} \rightarrow \mathbb{E_a}$ for even $k$**  
 
-## General Transition Rule
-1. In this scheme, Operation $U(n) = an+1$, on $\mathbb{O}$, leaves $k$ unchanged. 
-i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
-
-2. The transition from any Even set to $\mathbb{O}$ increases $k$.
-
-3. The transition from any Even set to another Even set decreases $k$.
 
 ### Transition Rule for $3n+1$  
 **1. $\Delta k [\mathbb{O} \rightarrow \mathbb{E_c}] = 0$ for all $k$ | $k_{i+1}=k_i$**  
@@ -96,11 +89,17 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 **4a. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{O_a}] = (k+1)/2$ for odd $k$ | $k_{i+1}=(3k_i+1)/2$**   
 **5b. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{E_a}] = -(k/2)$ for even $k$ | $k_{i+1}=(k_i/2)$**  
 
+**NOte:**
+1. In this scheme, Operation $U(n) = 3n+1$, on $\mathbb{O}$, leaves $k$ unchanged.
+2. The transition from any Even set to $\mathbb{O}$ increases $k$.
+2. The transition from any Even set to another Even set decreases $k$.
+
+
 ## Transition Graph
 <img src="3n_v2.png" alt="Description" width="600">
 Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$. Red arrow halves the value and green arrows increases by $an+1$.
 
-## Observation (General)
+**Observation**
 **1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$.** 
 - Implication: When searching for a cycle, look elsewhere.
 
@@ -127,7 +126,7 @@ $$
 n = (k=2^{(l+1)/2}, \mathbb{O_c})
 $$ 
 
-Let's, denote the positive integer exponent by $q$ and index with step no 0.
+Let's, denote the positive integer exponent by $q$ and index with operation count as a subscript.
 
 Then, 
 
@@ -179,7 +178,7 @@ Transition $\mathbb{O_c} \rightarrow \mathbb{E_c} \rightarrow \mathbb{O_c}$ repe
 $k$ remains divisible by 2 until $2q$ operations after which $k$ becomes.
 
 $$
-k_{2q} \leftarrow (3k_{2q-1}/2)$ = 3^{2q} \times 2^{q-q} = 3^{2q} 
+k_{2q} \leftarrow (3k_{2q-1}/2) = 3^{2q} \times 2^{q-q} = 3^{2q} 
 $$
 
 and 
@@ -190,7 +189,7 @@ $$
 
 Note that n = 1 in its partitional form is equal to $(1, \mathbb{O_1}) \neq (3^{2q}, \mathbb{E_c})$.
 
-Operation $\mathbb{O_c} \rightarrow \mathbb{E_c} only increases the value of $k$ thus it cannot form a cycle.
+Operation $\mathbb{O_c} \rightarrow \mathbb{E_c}$ only increases the value of $k$ thus it cannot form a cycle.
 
 Proved.
 
