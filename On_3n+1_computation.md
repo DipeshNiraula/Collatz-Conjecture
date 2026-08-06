@@ -54,7 +54,7 @@ Partition $\mathbb{N}$ into four sets as follows:
 ## Sub-Partitioning $\mathbb{O}$ (3 even + 3 odd)
 $\mathbb{O}$ can be divided into $3$ subpartitions based on $L(n)$ mapping as follows:
 
-$\mathbb{O}$ = {\mathbb{O_1} \cap \mathbb{O_a} \cap \mathbb{O_c}$
+$\mathbb{O} = \mathbb{O_1} \cap \mathbb{O_a} \cap \mathbb{O_c}$
 
 1. $\mathbb{O_1} = {6m-5: m \in \mathbb{N}}$
 2. $\mathbb{O_a} = {6m-3: m \in \mathbb{N}}$
@@ -96,7 +96,7 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 **4a. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{O_a}] = (k+1)/2$ for odd $k$ | $k_{i+1}=(3k_i+1)/2$**   
 **5b. $\Delta k [\mathbb{E_a} \rightarrow \mathbb{E_a}] = -(k/2)$ for even $k$ | $k_{i+1}=(k_i/2)$**  
 
-## Transition Graph for $3n +1$ and $5n+1$
+## Transition Graph
 <img src="3n_v2.png" alt="Description" width="600">
 Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$. Red arrow halves the value and green arrows increases by $an+1$.
 
