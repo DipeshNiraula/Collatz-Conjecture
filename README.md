@@ -187,7 +187,7 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 
 Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$. Red arrow halves the value and green arrows increases by $an+1$.
 
-## Observation
+## Observation (General)
 **1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$.** 
 - Implication: When searching for a cycle, look elsewhere.
 
@@ -195,6 +195,14 @@ Seems like the following are related statements:
 **2a. Only the elements of partitions $\mathbb{E_c}$ can be landed from even and odd number.**  
 **2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.**  
 **2c. Every loop contains element from $\mathbb{E_c}$.**  
+
+## Observation (Specific)
+**1. For $3n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers will eventually converge to about 33% (1/3). The graph shows why this happens: numbers from $E_a$ eventually escapes the partitions and the numbers will land on one of remaining three partitions.**
+
+*TO DO*
+**2. This means for $5n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers must eventually converge to about 20% (1/5)**
+**3. This means for $7n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers must eventually converge to about 25% (1/4)**
+**5. This means for $9n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers must eventually converge to about 14.2% (1/7)**
 
 ### Example using Transition Rule for $3n+1$ (3+1)
 
