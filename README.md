@@ -229,7 +229,7 @@ a. 1 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
 ### Known Cycle for 5n+1 (using 5 + 5)
 
 a. 1 $\rightarrow$ 6 $\rightarrow$ 3 $\rightarrow$ 16 $\rightarrow$ 8 $\rightarrow$ 4 $\rightarrow$ 2 $\rightarrow$ 1
-- $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\mathbb{O_1}$
+- $\mathbb{O_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\rightarrow$ $\mathbb{O_1}$
 
 b. 13 $\rightarrow$ 66 $\rightarrow$ 33 $\rightarrow$ 166 $\rightarrow$ 83 $\rightarrow$ 416 $\rightarrow$ 208 $\rightarrow$ 104 $\rightarrow$ 52 $\rightarrow$ 26 $\rightarrow$ 13
 - $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{E_4}$ $\rightarrow$ $\mathbb{E_2}$ $\rightarrow$ $\mathbb{E_1}$ $\rightarrow$ $\mathbb{E_c}$ $\rightarrow$ $\mathbb{O_c}$
@@ -241,10 +241,10 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 7o-5 = 14k-12: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 7o-3 = 14k-10: k \in \mathbb{N} \\}$
-4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$(Doesn't contain $2^p$, $2^p$ (mod7) results in {1,2,4...}, -4$\equiv$3$ (mod3))
+4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$ (Doesn't contain $2^p$, $2^p$ (mod7) results in $\\{1,2,4...\\}$, $-4 \equiv 3$ (mod7))
 5. $\mathbb{E_c} = \\{ 7o+1 = 14k-6: k \in \mathbb{N} \\}$
-6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$(Doesnt contain $2^p$, $2^p$ (mod7) results in {1,2,4...}, -2$\equiv$5$ (mod3))
-7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$(Doesnt contain $2^p$, $2^p$ (mod7) results in {1,2,4...}, -1$\equiv$6$ (mod3))
+6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$, $2^p$ (mod7) results in $\\{1,2,4...\\}$, $-2 \equiv 5$ (mod7))
+7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$, $2^p$ (mod7) results in $\\{1,2,4...\\}$, $-1\equiv 6$ (mod7))
 8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$)
 
 ### Table for $7n+1$
