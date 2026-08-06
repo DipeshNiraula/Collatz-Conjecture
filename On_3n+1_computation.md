@@ -58,7 +58,7 @@ $\mathbb{O} = \mathbb{O_1} \cap \mathbb{O_a} \cap \mathbb{O_c}$
 
 1. $\mathbb{O_1} = \\{6m-5: m \in \mathbb{N}\\}$
 2. $\mathbb{O_a} = \\{6m-3: m \in \mathbb{N}\\}$
-5. $\mathbb{O_c} = {6m-1: m \in \mathbb{N}\\}$
+5. $\mathbb{O_c} = \\{6m-1: m \in \mathbb{N}\\}$
 
 **Every natural number $n$ can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $1 = (1, \mathbb{O_c})$, $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$.
