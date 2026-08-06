@@ -96,10 +96,14 @@ For eg: in $3n+1$, Natural number $1 = (1, \mathbb{O_c})$, $12 = (2, \mathbb{E_a
 
 
 ## Transition Graph
-<img src="3n_v2.png" alt="Description" width="600">
-Probability of transition is given in red and $\Delta k$ is given in blue. Note that $\Delta k$ must be integer which clarifies the parity of $k$. Red arrow halves the value and green arrows increases by $an+1$.
+<img src="3n_v2.png" alt="Description" width="600">  
 
-**Observation**
+- Probability of transition is given in red and $\Delta k$ is given in blue.
+- $\Delta k$ must be integer which clarifies the parity of $k$. 
+- Red arrow halves the value of number and green arrows increases the value of number by $3n+1$.
+- However, note that in this scheme, the transition from Odd set to $\mathbb{E_c}$ leaves the index $k$ unchanged and transition from Even to Odd partition increases the value of index $k$.
+ 
+**Some Observations**  
 **1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$.** 
 - Implication: When searching for a cycle, look elsewhere.
 
