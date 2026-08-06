@@ -1,4 +1,4 @@
-## If a computer can compute up to $l$ Collatz operations, we can always pick a number that is guarenteed to exceed $l$ operations without reaching to 1 and not getting into a cycle.
+## Theorem: If a computer can compute up to $l$ Collatz operations, we can always pick a number that is guaranteed to exceed $l$ operations without reaching to 1 and not getting into a cycle.
 
 (Not sure if this has been shown elsewhere, but for a computational person like me, this seems relevant.)
 
