@@ -1,6 +1,6 @@
 ## Theorem: If a computer can compute up to $l$ Collatz operations, we can always pick a number that is guaranteed to exceed $l$ operations without reaching to 1 and not getting into a cycle.
 
-(Not sure if this has been shown elsewhere, but for a computational person like me, this seems relevant.)
+(This is probably trivial.)
 
 ## Collatz-Conjecture Problem Statement
 From [wiki](https://en.wikipedia.org/wiki/Collatz_conjecture)
