@@ -41,27 +41,27 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 2. $L(n):= n/2$ compresses the number line or equivalently $L(n) <n$ for even $n$
 3. The only way to get out is to land on a $2^n\$
 
-## Partitioning Even set into $a$ partitions
-The following method will generate disjoint partitions that spans $\mathbb{N}$ and the relation between index $k$ and odd number $o$ remains the same for all $an+1$ partitions. This partitioning system helps in comparing the transitions. Subscripts $c$ stands for collatz and subscript $a$ from $an+1$. As you will see these are special partitions. 
+## Partitioning $\mathbb{N}$ into 3 Even partition and 1 Odd partition. Then divide the Odd partition into 3 sub partition.
+The following method will generate four disjoint partitions that spans $\mathbb{N}$. Subscripts $c$ stands for Collatz and subscript $a$ is from $an+1$. As you will see these are special partitions. 
 
-### $3n+1$ (3 even + 1 odd)
+### 3 even + 1 odd
 Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_c} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
 
-## Sub-Partitioning $\mathbb{O}$ 
-Furthermore $\mathbb{O}$ can be partitioned into $a$ subpartitions based on $L(n)$ mapping.
+## Sub-Partitioning $\mathbb{O}$ (3 even + 3 odd)
+$\mathbb{O}$ can be divided into $3$ subpartitions based on $L(n)$ mapping as follows:
 
-### for 3n+1 (3 even + 3 odd)
 $\mathbb{O}$ = {\mathbb{O_1} \cap \mathbb{O_a} \cap \mathbb{O_c}$
-\mathbb{O_1} = {6m-5: m \in \mathbb{N}}
-\mathbb{O_a} = {6m-3: m \in \mathbb{N}}
-\mathbb{O_c} = {6m-1: m \in \mathbb{N}}
+
+1. $\mathbb{O_1} = {6m-5: m \in \mathbb{N}}$
+2. $\mathbb{O_a} = {6m-3: m \in \mathbb{N}}$
+3. $\mathbb{O_c} = {6m-1: m \in \mathbb{N}}$
 
 **Every natural number $n$ can be characterized by the number $k$ and the partition.**   
-For eg: in $3n+1$, Natural number $1 = (1,  $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$.
+For eg: in $3n+1$, Natural number $1 = (1, \mathbb{O_c})$, $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$.
 
 ## Property of the Partitions for $3n+1$ (proof in appendix)
 
