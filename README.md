@@ -368,7 +368,7 @@ $$
 n_{2q} = (3^{2q}, \mathbb{E_c})
 $$
 
-Note that n = 1 in partitional form is equal to $(1, \mathbb{E_1}) \neq (3^{2q}, \mathbb{E_c})$.
+Note that n = 1 in partitional form is equal to $(1, \mathbb{O_1}) \neq (3^{2q}, \mathbb{E_c})$.
 
 proved.
 
