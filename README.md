@@ -196,14 +196,6 @@ Seems like the following are related statements:
 **2b. If there exist a cycle an element from $\mathbb{E_c}$ must participate.**  
 **2c. Every loop contains element from $\mathbb{E_c}$.**  
 
-## Observation (Specific)
-**1. For $3n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers will eventually converge to about 33% (1/3). The graph shows why this happens: numbers from $E_a$ eventually escapes the partitions and the numbers will land on one of remaining three partitions.**  
-
-*TO DO*  
-**2. This means for $5n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers must eventually converge to about 20% (1/5)**  
-**3. This means for $7n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers must eventually converge to about 25% (1/4)**  
-**5. This means for $9n+1$, if we take 100 numbers from any partition and run operations, the number of odd numbers must eventually converge to about 14.2% (1/7)**  
-
 ### Example using Transition Rule for $3n+1$ (3+1)
 
 We pick a number ($k=100$, $\mathbb{E_a}$). The following is its transition.
