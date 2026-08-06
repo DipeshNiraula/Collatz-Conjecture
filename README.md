@@ -59,9 +59,6 @@ Partition $\mathbb{N}$ into four sets as follows:
 3. $\mathbb{E_4} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
 4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$
 
-
-**Note: I changed the subscript of $3n+1$ from $\\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_c}, \mathbb{E_a}\\}$ and of $5n+1$ from $\\{\mathbb{E_0}, \mathbb{E_1}, \mathbb{E_2}, \mathbb{E_3}, \mathbb{E_4}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_c}, \mathbb{E_3}, \mathbb{E_a}\\} \rightarrow \\{\mathbb{E_1}, \mathbb{E_2}, \mathbb{E_c}, \mathbb{E_4}, \mathbb{E_a}\\}$. There might be error carryover.**
-
 **Every number can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
 
