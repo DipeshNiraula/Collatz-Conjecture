@@ -48,7 +48,7 @@ Partition $\mathbb{N}$ into four sets as follows:
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 3o-1 = 6k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_c} = \\{ 3o+1 = 6k-2: k \in \mathbb{N} \\}$
-4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$)
+4. $\mathbb{E_a} = \\{ 3o+3 = 6k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
 
 ### 5n+1 (5 even + 1 odd)
 Partition $\mathbb{N}$ into four sets as follows:
@@ -57,7 +57,7 @@ Partition $\mathbb{N}$ into four sets as follows:
 3. $\mathbb{E_2} = \\{ 5o-1 = 10k-6: k \in \mathbb{N} \\}$
 4. $\mathbb{E_c} = \\{ 5o+1 = 10k-4: k \in \mathbb{N} \\}$
 3. $\mathbb{E_4} = \\{ 5o+3 = 10k-2: k \in \mathbb{N} \\}$
-4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$)
+4. $\mathbb{E_a} = \\{ 5o+5 = 10k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
 
 **Every number can be characterized by the number $k$ and the partition.**   
 For eg: in $3n+1$, Natural number $12 = (2, \mathbb{E_a})$ and $16 = (3, \mathbb{E_c})$, while in $5n+1$, $12 = (2, \mathbb{E_1})$ and $16 = (2, \mathbb{E_c})$.
@@ -241,11 +241,11 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 7o-5 = 14k-12: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 7o-3 = 14k-10: k \in \mathbb{N} \\}$
-4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$ (Doesn't contain $2^p$, $2^p$ (mod7) results in $\\{1,2,4...\\}$, $-4 \equiv 3$ (mod7))
+4. $\mathbb{E_3} = \\{ 7o-1 = 14k-8: k \in \mathbb{N} \\}$ (Doesn't contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-4 \equiv 3$ (mod7))
 5. $\mathbb{E_c} = \\{ 7o+1 = 14k-6: k \in \mathbb{N} \\}$
-6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$, $2^p$ (mod7) results in $\\{1,2,4...\\}$, $-2 \equiv 5$ (mod7))
-7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$, $2^p$ (mod7) results in $\\{1,2,4...\\}$, $-1\equiv 6$ (mod7))
-8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$ (Doesnt contain $2^p$)
+6. $\mathbb{E_5} = \\{ 7o+3 = 14k-4: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-2 \equiv 5$ (mod7))
+7. $\mathbb{E_6} = \\{ 7o+5 = 14k-2: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$, $2^n$ (mod7) results in $\\{1,2,4...\\}$, $-1\equiv 6$ (mod7))
+8. $\mathbb{E_a} = \\{ 7o+7 = 14k: k \in \mathbb{N} \\}$ (Doesnt contain $2^n$)
 
 ### Table for $7n+1$
 
@@ -283,13 +283,13 @@ c. 17 $\rightarrow$ 86 $\rightarrow$ 43 $\rightarrow$ 216 $\rightarrow$ 108 $\ri
 1. $\mathbb{O} = \\{ o = 2k-1: k \in \mathbb{N} \\}$
 2. $\mathbb{E_1} = \\{ 9o-7 = 18k-16: k \in \mathbb{N} \\}$
 3. $\mathbb{E_2} = \\{ 9o-5 = 18k-14: k \in \mathbb{N} \\}$
-4. $\mathbb{E_3} = \\{ 9o-3 = 18k-12: k \in \mathbb{N} \\}$ (This is of the form $3(6k-4)$, Therefore, cannot contain $2^p$)  
+4. $\mathbb{E_3} = \\{ 9o-3 = 18k-12: k \in \mathbb{N} \\}$ (This is of the form $3(6k-4)$, Therefore, cannot contain $2^n$)  
 5. $\mathbb{E_4} = \\{ 9o-1 = 18k-10: k \in \mathbb{N} \\}$ 
 6. $\mathbb{E_c} = \\{ 9o+1 = 18k-8: k \in \mathbb{N} \\}$
-7. $\mathbb{E_6} = \\{ 9o+3 = 18k-6: k \in \mathbb{N} \\}$ (This is of the form $3(6k-2)$, Therefore, cannot contain $2^p$)  
+7. $\mathbb{E_6} = \\{ 9o+3 = 18k-6: k \in \mathbb{N} \\}$ (This is of the form $3(6k-2)$, Therefore, cannot contain $2^n$)  
 8. $\mathbb{E_7} = \\{ 9o+5 = 18k-4: k \in \mathbb{N} \\}$
 9. $\mathbb{E_8} = \\{ 9o+7 = 18k-2: k \in \mathbb{N} \\}$
-10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$ (Doesn't contain $2^p$)
+10. $\mathbb{E_a} = \\{ 9o+9 = 18k: k \in \mathbb{N} \\}$ (Doesn't contain $2^n$)
  
 ### Table for $9n+1$ 
 
@@ -378,12 +378,12 @@ But $2^{n-1}$ is a product of only the prime number 2, so it's only prime diviso
 Contradition.  
 
 **Theorem 6**  
-**All $2^p$ for even $p$ lives in $\mathbb{E_c}$.**  
-i.e. $\\{2^p: p \, \text{even}\\} \subset \\{6k-2): k \in \mathbb{N}\\}$
+**All $2^n$ for even $n$ lives in $\mathbb{E_c}$.**  
+i.e. $\\{2^n: p \, \text{even}\\} \subset \\{6k-2): k \in \mathbb{N}\\}$
 
 Proof:
-$p=2m, m\in \mathbb{N}$  
-Then, $2^p = 2^{2m}$  
+$n=2m, m\in \mathbb{N}$  
+Then, $2^n = 2^{2m}$  
 Since, $2^2 \equiv 1$ (mod 3)  
 $2^{2m} \equiv 1^m = 1$ (mod 3)  
 Therefore, $2^{2m-1} \equiv 2 \equiv -1$  
@@ -392,15 +392,15 @@ So there exists $k\in \mathbb{N}$, such that,
 $2^{2m-1} = 3k-1$.  
 or, $2^{2m} = 2(3k-1)$.
 
-Hence, $2^p = 6k-2$.  
+Hence, $2^n = 6k-2$.  
 
 **Theorem 7**  
-**All $2^p$ for odd $p$ lives in $\mathbb{E_1}$.**  
-i.e. $\\{2^p: p \, \text{odd} \\} \subset \\{6k-4): k \in \mathbb{N}\\}$
+**All $2^n$ for odd $n$ lives in $\mathbb{E_1}$.**  
+i.e. $\\{2^n: p \, \text{odd} \\} \subset \\{6k-4): k \in \mathbb{N}\\}$
 
 Proof:
-$p=2m+1, m \in \mathbb{N} \cup \\{0\\} \$  
-Then, $2^p = 2^{2m+1}$  
+$n=2m+1, m \in \mathbb{N} \cup \\{0\\} \$  
+Then, $2^n = 2^{2m+1}$  
 Since, $2^2 \equiv 1$ (mod 3)  
 $2^{2m} \equiv 1$ (mod 3)  
 Therefore, $2^{2m} \equiv 3k-2$  
@@ -408,11 +408,11 @@ Therefore, $2^{2m} \equiv 3k-2$
 So there exists $k\in \mathbb{N}$, such that,  
 $2^{2m+1} = 2(3k-2)$.  
 
-Hence, $2^p = 6k-4$.  
+Hence, $2^n = 6k-4$.  
 
-**Note that $2^p$ for odd $p$ can be landed from only $2^p$ for even $p$.** 
+**Note that $2^n$ for odd $p$ can be landed from only $2^n$ for even $n$.** 
 
-**For 5n+1, the observation about $2^p$ seems to be consistent with $3n+1$ but with added complexity. Eg: $2^n$ is missing from $E_a$.**
+**For 5n+1, the observation about $2^n$ seems to be consistent with $3n+1$ but with added complexity. Eg: $2^n$ is missing from $E_a$.**
 
 ## Intuition
 1. Considering the whole set of Natural Number ($\mathbb{N}$) felt more appropriate than studying the sequence itself. May be because this process is probabilistic (in some sense, eg: some number can be generated by both n/2 and 3n+1 process, while others cant)
