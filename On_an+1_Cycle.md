@@ -103,7 +103,7 @@ Thus, $b = 4$. We have $l=2$ and $u=1$, Therefore, $n = 4 \in \mathbb{E_c}$.
 
 This means a cycle exist in loop IV. The remaining 2 permutations is guaranteed to yield positive integer but we test it anyway for completion.
 
-2. Consider the permuation: $ \mathbb{E_1} \rightarrow \mathbb{O_1} \rightarrow \mathbb{E_c} \rightarrow \mathbb{E_1}$
+2. Consider the permuation: $\mathbb{E_1} \rightarrow \mathbb{O_1} \rightarrow \mathbb{E_c} \rightarrow \mathbb{E_1}$
 Here,
 
 $$
@@ -116,7 +116,7 @@ Thus, $b = 2$. We have $l=2$ and $u=1$, Therefore, $n = 2 \in \mathbb{E_1}$.
 Here,
 
 $$
-S(n) = L \circ L \circ U(n) = \frac(1/2)\frac(1.2)(3n+1) + 1 = \frac{3n + 1}{2^2}
+S(n) = L \circ L \circ U(n) = \frac{1}{2}\frac{1}{2}(3n+1) = \frac{3n + 1}{2^2}
 $$
 
 Thus, $b = 1$. We have $l=2$ and $u=1$, Therefore, $n = 1 \in \mathbb{O_1}$.
@@ -130,14 +130,14 @@ We can pick any permutation. If it's a cycle, we will get a positive integer sol
 Consider the permutation: $\mathbb{O_1} \rightarrow \mathbb{E_c} \rightarrow \mathbb{E_1} \rightarrow \mathbb{O_1}\rightarrow \mathbb{E_c} \rightarrow \mathbb{E_1} \rightarrow \mathbb{O_1}$
 
 $$
-S(n) = L \circ L \circ U \ circ L \circ L \circ U(n) = \frac{3^2 n + 3 + 2^2}{2^4}
+S(n) = L \circ L \circ U \circ L \circ L \circ U(n) = \frac{3^2 n + 3 + 2^2}{2^4}
 $$
 
 Thus, $b = 7$. Here, $l=4$, $u=2$, and $2^4 - 3^2 = 7$. Thus $n = 1 \in \mathbb{O_1}$. This is same as going around 1 time.
 
 So, either only one cycle can exist per loop, or this method is not capable of giving all cycle. 
 
-**Loop V** (this one is knotted)
+**Loop II + Loop III**
 1. Consider the following permutation: $\mathbb{O_C} \rightarrow \mathbb{E_C} \rightarrow \mathbb{E_1} \rightarrow \mathbb{E_C} \rightarrow \mathbb{O_C}$
 
 $$
@@ -152,24 +152,47 @@ $$
 S(n) = L \circ L \circ U \circ L(n) = \frac{3n+2}{2^3}
 $$
 
-Thus, $b = 2$. Here, $l=3$, $u=1$, and $2^3 - 3^1 = 5$. Thus $n = 2/5$. A cycle dont exit.
+Thus, $b = 2$. Here, $l=1+2$, $u=1+0$, and $2^3 - 3^1 = 5$. Thus $n = 2/5$. A cycle dont exit.
 
 
-**Let's loop around loop III twice before going to II**
-$\mathbb{O_C} \rightarrow \mathbb{E_C} \rightarrow $\mathbb{O_C} \rightarrow \mathbb{E_C} \rightarrow \mathbb{E_1} \rightarrow \mathbb{E_C} \rightarrow \mathbb{O_C}$
+**loop around loop III before going to II (Start on $\mathbb{O_c}$)**
+1. loop 2 times: $\mathbb{O_C} \rightarrow \mathbb{E_C} \rightarrow $\mathbb{O_C} \rightarrow \mathbb{E_C} \rightarrow \mathbb{E_1} \rightarrow \mathbb{E_C} \rightarrow \mathbb{O_C}$
 
 $$
 S(n) = L \circ L \circ L \circ U\circ L \circ U(n) = \frac{3n^2 + 3 + 2}{2^4}
 $$
 
-Thus, $b = 5$. Here, $l=4$, $u=2$, and $2^4 - 3^2 = 7$. Thus $n = 5/4$. A cycle dont exit.
+Thus, $b = 5$. Here, $l=2+2$, $u=2+0$, and $2^4 - 3^2 = 7$. Thus $n = 5/4$. A cycle dont exit.
 
-Further looping around loop III, before going to II which result in 
-1. $l=5$, $u=3$, $2^5 - 3^3 = 5$ (check this)
-2. $l=6$, $u=4$, $2^6 - 3^4 = -17$ (after this 3^u > 2^l, yielding negative $n$)
-3. $l=7$, $u=5$, $2^7 - 3^5 = -115$
+2. loop 3 times: $l=5$, $u=3$, $2^5 - 3^3 = 5$ and $b = 3^2+2\cdot3+2^2 = 19 \equiv 4$ (mod 5), no cycle.
+3. loop 4 times: $l=6$, $u=4$, $2^6 - 3^4 = -17$ (after this 3^u > 2^l, yielding negative $n$, no cycle.)
+4. loop 5 times: $l=7$, $u=5$, $2^7 - 3^5 = -115$
 
-# Loop IV
+**loop around loop III before going to II (Start on $\mathbb{E_c}$)**
+1. loop 2 times: $\mathbb{E_C} \rightarrow \mathbb{O_C} \rightarrow $\mathbb{O_C} \rightarrow \mathbb{E_C} \rightarrow \mathbb{E_1} \rightarrow \mathbb{E_C} \rightarrow \mathbb{O_C}$
+
+$$
+S(n) = L \circ L \circ L \circ U\circ L \circ U(n) = \frac{3n^2 + 3 + 2}{2^4}
+$$
+
+Thus, $b = 5$. Here, $l=2+2$, $u=2+0$, and $2^4 - 3^2 = 7$. Thus $n = 5/4$. A cycle dont exit.
+
+2. loop 3 times: $l=5$, $u=3$, $2^5 - 3^3 = 5$ and $b = 3^2+2\cdot3+2^2 = 19 \equiv 4$ (mod 5), no cycle.
+3. loop 4 times: $l=6$, $u=4$, $2^6 - 3^4 = -17$ (after this 3^u > 2^l, yielding negative $n$, no cycle.)
+4. loop 5 times: $l=7$, $u=5$, $2^7 - 3^5 = -115$
+
+**loop around Loop II before going to III**
+1. loop 2 times: $l=5$, $u=1$, $2^5 - 3^1 \sim 2^5$, and $b = 1$, thus $n < 1$, no cycle.
+2. loop 3 times: $l=7$, $u=1$, $2^7 - 3^1 \sim 2^7$, and $b = 1$, thus $n < 1$, no cycle.
+3. loop 4 times: $l=9$, $u=1$, $2^9 - 3^1 \sim 2^9$, and $b = 1$, thus $n < 1$, no cycle.
+
+**loop around Loop II and then loop around III**
+1. Loop II 2 times then Loop III 2 times: $l=4+1$, $u=2$, $2^6 - 3^1 \sim 2^5$, and $b = 1$, thus $n < 1$, no cycle.
+2. loop 3 times: $l=7$, $u=1$, $2^7 - 3^1 \sim 2^7$, and $b = 1$, thus $n < 1$
+3. loop 4 times: $l=9$, $u=1$, $2^9 - 3^1 \sim 2^9$, and $b = 1$, thus $n < 1$
+
+
+# Loop II + Loop IV
 
 
 ## One loop can only have cycle. (How do we prove this?) 
