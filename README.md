@@ -291,9 +291,33 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 - However, note that in this scheme, the transition from Odd set to $\mathbb{E_c}$ leaves the index $k$ unchanged and transition from Even to Odd partition increases the value of index $k$.
 
 ## 3n +1 Transition Matrix and Stationary Distribution 
+
+|  |$\mathbb{O}$ | $\mathbb{E1}$ | $\mathbb{Ec}$ | $\mathbb{Ea}$ |
+|--- |---|---|---|---|
+ $\mathbb{O}$ |0.0|0.0|1.0|0.0|
+ $\mathbb{E_1}$ |0.5|0.0|0.5|0.0|
+ $\mathbb{E_c}$ |0.5|0.5|0.0|0.0|
+ $\mathbb{E_a}$ |0.5|0.0|0.0|0.5|
+
+Transition Matrix ($P$): 
+
+$$
+\begin{bmatrix}
+0.0 & 0.0 & 1.0 & 0.0 \\
+0.5 & 0.0 & 0.5 & 0.0 \\
+0.5 & 0.0 & 0.0 & 0.0 \\
+0.5 & 0.0 & 0.0 & 0.5 
+\end{bmatrix}
+$$
+
+Stationary Distribution: ($\pi = \pi P$)  
+$\pi$: [3/9, 2/9, 4/9, 0]
+
+
+### Codes:
+
 ```python
 import numpy as np
-
 
 '''
 3n+1
@@ -303,16 +327,14 @@ E1 = {3o−1 = 6k−4: k∈ N}
 Ec = {3o+1 = 6k−2: k∈ N}
 Ea = {3o+3 = 6k: k∈ N}
 
-
 --- | O | E1| Ec| Ea|
 --- |---|---|---|---|
   O |0.0|0.0|1.0|0.0|
  E1 |0.5|0.0|0.5|0.0|
- Ec |0.5|0.0|0.0|0.0|
+ Ec |0.5|0.5|0.0|0.0|
  Ea |0.5|0.0|0.0|0.5|
 
 state = [O, E1, Ec, Ea]
-
 
 try four states: pick a number randomly from each one of the partition
 S_O = [1, 0, 0, 0]
@@ -328,9 +350,7 @@ From solving $\pi = \pi \cdot P$
 Stationary distribution ($\pi$): [0.33333333 0.22222222 0.44444444 0.        ]
 
 Stationary distribution ($\pi$): [3/9, 2/9, 4/9, 0]
-
 '''
-
 Transition_matrix_3n_plus_1 = P = np.array([
     [0.0, 0.0, 1.0, 0.0],
     [0.5, 0.0, 0.5, 0.0],
@@ -343,7 +363,6 @@ S_Ec = np.array([0, 0, 1, 0])
 S_Ea = np.array([0, 0, 0, 1])
 
 S_uniform = np.array([0.25, 0.25, 0.25, 0.25])
-
 
 def k_step_transition(k, state):
     if k == 1:
@@ -365,7 +384,6 @@ print(f'{S_E1} after 30 state: {k_step_transition(30, S_E1)}')
 print(f'{S_Ec} after 10 state: {k_step_transition(10, S_Ec)}')
 print(f'{S_Ec} after 20 state: {k_step_transition(20, S_Ec)}')
 print(f'{S_Ec} after 30 state: {k_step_transition(30, S_Ec)}')
-
 
 print(f'{S_Ea} after 10 state: {k_step_transition(10, S_Ea)}')
 print(f'{S_Ea} after 20 state: {k_step_transition(20, S_Ea)}')
