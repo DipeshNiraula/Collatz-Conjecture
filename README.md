@@ -1,5 +1,12 @@
 # Visualization of Collatz-Conjecture through Partitioning
 
+## Transition Graph for $3n +1$ and $5n+1$
+<img src="3n_v2.png" alt="Description" width="600">
+<img src="5n_v2.png" alt="Description" width="700">
+
+## Transition Graph for $7n+1$ and $9n+1$
+<img src="7n_9n.png" alt="Description" width="700">
+
 ## Problem Statement
 From [wiki](https://en.wikipedia.org/wiki/Collatz_conjecture)
 
@@ -283,6 +290,156 @@ i.e. $\delta K (\mathbb{O} \rightarrow \mathbb{E_c}) = 0$
 - Red arrow halves the value of number and green arrows increases the value of number by $an+1$.
 - However, note that in this scheme, the transition from Odd set to $\mathbb{E_c}$ leaves the index $k$ unchanged and transition from Even to Odd partition increases the value of index $k$.
 
+## 3n +1 Transition Matrix and Stationary Distribution 
+```python
+import numpy as np
+
+
+'''
+3n+1
+
+O = {o = 2k−1: k∈N}
+E1 = {3o−1 = 6k−4: k∈ N}
+Ec = {3o+1 = 6k−2: k∈ N}
+Ea = {3o+3 = 6k: k∈ N}
+
+
+--- | O | E1| Ec| Ea|
+--- |---|---|---|---|
+  O |0.0|0.0|1.0|0.0|
+ E1 |0.5|0.0|0.5|0.0|
+ Ec |0.5|0.0|0.0|0.0|
+ Ea |0.5|0.0|0.0|0.5|
+
+state = [O, E1, Ec, Ea]
+
+
+try four states: pick a number randomly from each one of the partition
+S_O = [1, 0, 0, 0]
+S_E1 = [0, 1, 0, 0]
+S_Ec = [0, 0, 1, 0]
+S_Ea = [0, 0, 0, 1]
+
+try uniform distribution: when a number is picked randomly
+S_uniform = [0.25, 0.25, 0.25, 0.25]
+
+
+From solving $\pi = \pi \cdot P$
+Stationary distribution ($\pi$): [0.33333333 0.22222222 0.44444444 0.        ]
+
+Stationary distribution ($\pi$): [3/9, 2/9, 4/9, 0]
+
+'''
+
+Transition_matrix_3n_plus_1 = P = np.array([
+    [0.0, 0.0, 1.0, 0.0],
+    [0.5, 0.0, 0.5, 0.0],
+    [0.5, 0.5, 0.0, 0.0],
+    [0.5, 0.0, 0.0, 0.5]])
+
+S_O = np.array([1, 0, 0, 0])
+S_E1 = np.array([0, 1, 0, 0])
+S_Ec = np.array([0, 0, 1, 0])
+S_Ea = np.array([0, 0, 0, 1])
+
+S_uniform = np.array([0.25, 0.25, 0.25, 0.25])
+
+
+def k_step_transition(k, state):
+    if k == 1:
+        return state@P
+    elif k > 1:
+        state = state@P 
+        for i in range(k-1):
+            state = state@P
+        return state
+
+print(f'{S_O} after 10 state: {k_step_transition(10, S_O)}')
+print(f'{S_O} after 20 state: {k_step_transition(20, S_O)}')
+print(f'{S_O} after 30 state: {k_step_transition(30, S_O)}')
+
+print(f'{S_E1} after 10 state: {k_step_transition(10, S_E1)}')
+print(f'{S_E1} after 20 state: {k_step_transition(20, S_E1)}')
+print(f'{S_E1} after 30 state: {k_step_transition(30, S_E1)}')
+
+print(f'{S_Ec} after 10 state: {k_step_transition(10, S_Ec)}')
+print(f'{S_Ec} after 20 state: {k_step_transition(20, S_Ec)}')
+print(f'{S_Ec} after 30 state: {k_step_transition(30, S_Ec)}')
+
+
+print(f'{S_Ea} after 10 state: {k_step_transition(10, S_Ea)}')
+print(f'{S_Ea} after 20 state: {k_step_transition(20, S_Ea)}')
+print(f'{S_Ea} after 30 state: {k_step_transition(30, S_Ea)}')
+
+print(f'{S_uniform} after 10 state: {k_step_transition(10, S_uniform)}')
+print(f'{S_uniform} after 20 state: {k_step_transition(20, S_uniform)}')
+print(f'{S_uniform} after 30 state: {k_step_transition(30, S_uniform)}')
+
+"""
+[1 0 0 0] after 10 state: [0.33398438 0.22851562 0.4375     0.        ]
+[1 0 0 0] after 20 state: [0.33333397 0.22223473 0.4444313  0.        ]
+[1 0 0 0] after 30 state: [0.33333333 0.22222224 0.44444443 0.        ]
+
+[0 1 0 0] after 10 state: [0.33300781 0.21972656 0.44726562 0.        ]
+[0 1 0 0] after 20 state: [0.33333302 0.22221661 0.44445038 0.        ]
+[0 1 0 0] after 30 state: [0.33333333 0.22222221 0.44444445 0.        ]
+
+[0 0 1 0] after 10 state: [0.33300781 0.21875    0.44824219 0.        ]
+[0 0 1 0] after 20 state: [0.33333302 0.22221565 0.44445133 0.        ]
+[0 0 1 0] after 30 state: [0.33333333 0.22222221 0.44444445 0.        ]
+
+[0 0 0 1] after 10 state: [0.33300781 0.21875    0.44726562 0.00097656]
+[0 0 0 1] after 20 state: [3.33333015e-01 2.22215652e-01 4.44450378e-01 9.53674316e-07]
+[0 0 0 1] after 30 state: [3.33333333e-01 2.22222213e-01 4.44444453e-01 9.31322575e-10]
+
+[0.25 0.25 0.25 0.25] after 10 state: [3.33251953e-01 2.21435547e-01 4.45068359e-01 2.44140625e-04]
+[0.25 0.25 0.25 0.25] after 20 state: [3.33333254e-01 2.22220659e-01 4.44445848e-01 2.38418579e-07]
+[0.25 0.25 0.25 0.25] after 30 state: [3.33333333e-01 2.22222220e-01 4.44444447e-01 2.32830644e-10]
+"""
+
+#%%
+import numpy as np
+## Got this code from Co-Pilot
+def stationary_distribution(P, tol=1e-12):
+    """
+    Compute the stationary distribution of a Markov chain.
+    
+    Parameters:
+        P (ndarray): Transition matrix (n x n), rows sum to 1.
+        tol (float): Tolerance for numerical stability.
+    
+    Returns:
+        ndarray: Stationary distribution vector.
+    """
+    # Validate matrix
+    if not isinstance(P, np.ndarray):
+        raise TypeError("P must be a NumPy array.")
+    if P.shape[0] != P.shape[1]:
+        raise ValueError("P must be a square matrix.")
+    if not np.allclose(P.sum(axis=1), 1, atol=tol):
+        raise ValueError("Rows of P must sum to 1.")
+
+    # Solve (P^T - I) * pi = 0 with sum(pi) = 1
+    n = P.shape[0]
+    A = np.transpose(P) - np.eye(n)
+    A[-1] = np.ones(n)  # Replace last equation with sum(pi) = 1
+    b = np.zeros(n)
+    b[-1] = 1
+
+    # Solve linear system
+    pi = np.linalg.solve(A, b)
+
+    # Ensure non-negative due to numerical errors
+    pi[pi < 0] = 0
+    return pi / pi.sum()
+
+pi = stationary_distribution(P)
+print("Stationary distribution:", pi)
+"""
+Stationary distribution: [0.33333333 0.22222222 0.44444444 0.        ]
+"""
+
+```
 ## Observation (General)
 **1. If there exist a cycle, A cycle will not contain any elements from partitions $\mathbb{E_a}$ and $\mathbb{O_a}$.** 
 - Implication: When searching for a cycle, look elsewhere.
